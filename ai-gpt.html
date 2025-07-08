@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Navigator | Transformacyjny Program AI</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@600;700&display=swap">
+    <style>
+        :root {
+            --bg-color: #F9F9FB;
+            --primary-color: #3B0F77;
+            --secondary-color: #B0128C;
+            --accent-color: #DA1EAE;
+            --text-color: #2B2B33;
+            --gray-text: #A9A8BD;
+            --border-radius: 12px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            color: var(--primary-color);
+        }
+
+        h1 { font-size: 3rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 2rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-color);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-color), #EFF0F9);
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cards-grid {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: white;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="container">
+        <h1>AI Navigator: Transformacyjny Program AI</h1>
+        <p>"W świecie zalewu teorii o AI, tylko praktyczne warsztaty z ekspertem dają realne rezultaty"</p>
+        <a href="#opcja1" class="btn btn-primary">Zapisz się na bezpłatny warsztat</a>
+        <a href="#opcja2" class="btn btn-secondary">Dołącz do pełnego programu</a>
+    </div>
+</div>
+
+<div class="container section">
+    <h2>Dlaczego LIVE?</h2>
+    <div class="cards-grid">
+        <div class="card">Zadawaj pytania na żywo</div>
+        <div class="card">Natychmiastowa pomoc przy wdrożeniu</div>
+        <div class="card">Praca w grupie</div>
+        <div class="card">Rzeczywiste przykłady</div>
+    </div>
+</div>
+
+<div class="container section" id="opcja1">
+    <h2>Bezpłatny warsztat inauguracyjny</h2>
+    <p>Zacznij od praktycznych narzędzi AI bez zobowiązań.</p>
+    <a href="#" class="btn btn-primary">Zapisz się teraz</a>
+</div>
+
+<div class="container section" id="opcja2">
+    <h2>Pełny Program Transformacyjny</h2>
+    <p>Zyskaj dostęp do wszystkich warsztatów i ekskluzywnych bonusów.</p>
+    <a href="#" class="btn btn-primary">Dołącz do programu</a>
+</div>
+
+<footer class="footer">
+    &copy; 2025 Ludwik Siadlak | AI Navigator
+</footer>
+
+<div class="sticky-cta">
+    <a href="#opcja1" class="btn btn-primary">Bezpłatny warsztat</a>
+    <a href="#opcja2" class="btn btn-secondary">Pełny program</a>
+</div>
+
+<script>
+    window.addEventListener('scroll', () => {
+        const stickyCta = document.querySelector('.sticky-cta');
+        if (window.scrollY > 200) {
+            stickyCta.style.display = 'flex';
+        } else {
+            stickyCta.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>

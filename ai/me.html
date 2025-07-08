@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Landing Page</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+    body {
+      background: #0f0f1a; /* fallback */
+      background: linear-gradient(160deg, #0f0f1a 0%, #210e34 100%);
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: #00000040;
+    }
+    .hero img {
+      width: 180px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 30px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .hero .cta-btn {
+      display: inline-block;
+      background: #5a06d4;
+      padding: 15px 25px;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .hero .cta-btn:hover {
+      background: #7014e2;
+    }
+
+    /* Imagery / Imagined Scenario Section */
+    .imagined-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 60px 20px;
+      background-color: #0d0b15;
+    }
+    .imagined-section .item {
+      width: 300px;
+      margin: 20px;
+      padding: 20px;
+      background: #1f1b2e;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .imagined-section .item img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+    .imagined-section .item h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+    .imagined-section .item p {
+      line-height: 1.4;
+    }
+
+    /* Transformation (Testimonials) Section */
+    .testimonials {
+      padding: 60px 20px;
+      background: #140f20;
+    }
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .testimonials .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .testimonials .card {
+      width: 280px;
+      background: #1f1b2e;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+    .testimonials .card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .testimonials .card .name {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .testimonials .card .feedback {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    /* CTA / Booking Section */
+    .cta-section {
+      padding: 60px 20px;
+      background: #08060d;
+      text-align: center;
+    }
+    .cta-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .cta-section p {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      line-height: 1.4;
+    }
+    .cta-section .schedule-btn {
+      background: #5a06d4;
+      padding: 15px 25px;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+    .cta-section .schedule-btn:hover {
+      background: #7014e2;
+    }
+
+    /* Footer */
+    footer {
+      background: #0f0f1a;
+      text-align: center;
+      padding: 20px;
+    }
+    footer p {
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .imagined-section .item,
+      .testimonials .card {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="hero.jpg" alt="Hero Image" />
+    <h1>Zamień swoją nudną pracę na ekscytujące życie!</h1>
+    <p>
+      Odkryj, jak wprowadzić radykalne zmiany w swojej karierze i zacząć czerpać z niej radość. 
+      Dzięki sprawdzonej metodologii zbudowanej w oparciu o praktyczne doświadczenia.
+    </p>
+    <a href="#" class="cta-btn">Dowiedz się więcej</a>
+  </section>
+
+  <!-- Imagined Scenario Section -->
+  <section class="imagined-section">
+    <div class="item">
+      <img src="scenario1.jpg" alt="Scenario 1" />
+      <h3>Wyobraź to sobie:</h3>
+      <p>Pobudka bez presji, praca nad własnymi projektami, rozwój pasji.</p>
+    </div>
+
+    <div class="item">
+      <img src="scenario2.jpg" alt="Scenario 2" />
+      <h3>Brzmi dobrze?</h3>
+      <p>Zmień swoje życie zawodowe dzięki sprawdzonym krokom, które każdy może wdrożyć.</p>
+    </div>
+
+    <div class="item">
+      <img src="scenario3.jpg" alt="Scenario 3" />
+      <h3>Czas na zmianę</h3>
+      <p>Niezależnie od branży, możesz zbudować nową karierę z jasnym celem i satysfakcją.</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>Transformacja oczami klientów</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="testimonial1.jpg" alt="Client 1" />
+        <div class="name">Marcin</div>
+        <div class="feedback">
+          "Dzięki tym metodom w końcu czuję, że mam kontrolę nad własnym czasem
+          i mogę go lepiej wykorzystać."
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="testimonial2.jpg" alt="Client 2" />
+        <div class="name">Kasia</div>
+        <div class="feedback">
+          "Najlepsza decyzja w mojej karierze. Dzięki intensywnemu wsparciu 
+          udało mi się zrobić prawdziwy przeskok!"
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="testimonial3.jpg" alt="Client 3" />
+        <div class="name">Tomek</div>
+        <div class="feedback">
+          "Nie spodziewałem się takich szybkich efektów. Nowa perspektywa i konkretny plan rozwoju."
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / Booking Section -->
+  <section class="cta-section">
+    <h3>Zarezerwuj swoją pierwszą konsultację</h3>
+    <p>
+      Porozmawiajmy o twoich wyzwaniach i możliwościach. 
+      Odkryj, jak możesz rozwinąć swoją karierę i cieszyć się każdym dniem pracy.
+    </p>
+    <a href="#" class="schedule-btn">Zarezerwuj teraz</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Twoja Firma. Wszelkie prawa zastrzeżone.</p>
+  </footer>
+
+</body>
+</html>

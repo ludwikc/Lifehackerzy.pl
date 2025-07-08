@@ -122,68 +122,7 @@
 								<div class="logo"><a href="index.html"><img src="assets/images/logo.svg" alt="Hackerzy" title="Hackerzy" style="width:  200px;"></a></div>
 							</div>
 							<!-- Main Menu -->
-							<nav class="main-menu navbar-expand-md" style="display: none;">
-								<div class="navbar-header">
-									<!-- Toggle Button -->    	
-									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-										<span class="icon-bar"></span>
-									</button>
-								</div>
-								
-								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-									<ul class="navigation clearfix">
-										<li class="dropdown"><a href="#">Home</a>
-											<ul>
-												<li><a href="index.html">HomePage 01</a></li>
-												<li><a href="index-2.html">HomePage 02</a></li>
-												<li><a href="index-3.html">HomePage 03</a></li>
-												<li class="dropdown"><a href="#">Header Style</a>
-													<ul>
-														<li><a href="index.html">Header 01</a></li>
-														<li><a href="index-2.html">Header 02</a></li>
-														<li><a href="index-3.html">Header 03</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li><a href="about.html">About</a></li>
-										<li class="dropdown"><a href="#">Pages</a>
-											<ul>
-												<li><a href="faq.html">Faq</a></li>
-												<li><a href="pricing.html">Price</a></li>
-												<li><a href="testimonial.html">Testimonial</a></li>
-												<li><a href="login.html">Login</a></li>
-												<li><a href="register.html">Register</a></li>
-												<li><a href="reset.html">Forgot password</a></li>
-												<li class="dropdown"><a href="#">Team</a>
-													<ul>
-														<li><a href="team.html">Team</a></li>
-														<li><a href="#plan">Team detail</a></li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">Services</a>
-											<ul>
-												<li><a href="services.html">Services</a></li>
-												<li><a href="#plan">Services detail</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">Blog</a>
-											<ul>
-												<li><a href="blog.html">Blog grid</a></li>
-												<li><a href="blog-classic.html">Blog classic</a></li>
-												<li><a href="news-detail.html">Blog detail</a></li>
-												<li><a href="not-found.html">Not found</a></li>
-											</ul>
-										</li>
-										<li><a href="mailto:connect@siadlak.email?subject=Pytanie%20o%20Hacker%C3%B3w&body=Cze%C5%9B%C4%87%20Ludwik%2C%20mam%20pytanie%20o%20spo%C5%82eczno%C5%9B%C4%87%20Hacker%C3%B3w%3A%20%0A%0A-%20">Contact</a></li>
-									</ul>
-								</div>
-							</nav>
-						</div>
+	
 
 						<!-- Main Menu End-->
 						<div class="outer-box d-flex align-items-center flex-wrap">
@@ -192,7 +131,7 @@
 
 							<!-- Button Box -->
 							<div class="main-header_buttons">
-								<a href="https://portal.siadlak.com" class="template-btn btn-style-two">
+								<a href="https://platforma.siadlak.com" class="template-btn btn-style-two">
 									<span class="btn-wrap">
 										<span class="text-one">Zaloguj</span>
 										<span class="text-two">Zaloguj</span>
@@ -1679,12 +1618,12 @@ Lifehackerzy są <strong>bezpłatną społecznością</strong> dostępną wyłą
 									<div class="price-block_one style-two col-lg-4 col-md-6 col-sm-12">
 										<div class="price-block_one-inner">
 											<div class="price-one_stars" style="background-image:url(assets/images/icons/price-stars.png)"></div>
-											<div class="price-block_one-title">Rozmowy o Tobie</div>
-											<div class="price-block_one-subtitle">Sesje mentoringowe 1:1</div>
+											<div class="price-block_one-title">Mentoring funkcjonalny</div>
+											<div class="price-block_one-subtitle">Spotkania indywidualne</div>
 											<div class="price-block_one-content">
 												<div class="d-flex justify-content-between align-items-end flex-wrap">
-													<div class="price-block_one-price">16 000<sup>PLN</sup><sub>&nbsp;</sub></div>
-													<div class="price-block_one-text">Tylko dla wybranych<br><span style="color:rgba(163, 163, 163, 0.5)">Najniższa cena z ostatnich 30 dni: 16 000 PLN</span></div>
+													<div class="price-block_one-price">12 000<sup>PLN</sup><sub>&nbsp;</sub></div>
+													<div class="price-block_one-text">Tylko dla wybranych<br><span style="color:rgba(163, 163, 163, 0.5)">Najniższa cena z ostatnich 30 dni: 12 000 PLN</span></div>
 												</div>
 												
 												<ul class="price-block_one-list">
@@ -1694,7 +1633,7 @@ Lifehackerzy są <strong>bezpłatną społecznością</strong> dostępną wyłą
 													<li><em class="fa-solid fa-xmark fa-fw"></em><span style="text-decoration: line-through;">Indywidualne Video Powitalne</span></li>
 													<li><em class="fa-solid fa-xmark fa-fw"></em><span style="text-decoration: line-through;">Szkolenie 7 technik</span></li>
 													<li><em class="fa-solid fa-xmark fa-fw"></em><span style="text-decoration: line-through;">Szkolenie Hakowanie Produktywności</span></li>
-													<li><em class="fa-solid fa-handshake fa-fw"></em>8 spotkań poświęconych tylko Tobie </li>
+													<li><em class="fa-solid fa-handshake fa-fw"></em>8 indywidualnych sesji mentoringowych</li>
 													<li><em class="fa-solid fa-file-signature fa-fw"></em>Tylko po wypełnieniu aplikacji
 												</ul>
 												<div class="price-block_one-button">
@@ -2355,8 +2294,8 @@ Lifehackerzy są <strong>bezpłatną społecznością</strong> dostępną wyłą
 										<ul class="footer-pages_list">
 											<li><a href="#">Onboarding</a> </li>
 											<li><a href="https://discord.com/channels/428530875085619200/1128649406640558110">Discord</a> </li>
-											<li><a href="https://portal.siadlak.com">Portal Lifehackerów</a></li>
-											<li><a href="https://portal.siadlak.com">Toolbox</a> </li>
+											<li><a href="https://platforma.siadlak.com">Platforma</a></li>
+											<li><a href="https://platforma.siadlak.com/c/toolbox/15">Toolbox</a> </li>
 											<li><a href="https://discord.com/channels/428530875085619200/1007740509252493433">Pomoc</a></li>
 										</ul>
 									</div>

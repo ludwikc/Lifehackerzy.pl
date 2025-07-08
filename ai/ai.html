@@ -1,0 +1,4221 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Navigator | Transformacyjny Program Praktycznego Wykorzystania AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            /* Colors */
+            --luminous-white: #F9F9FB;
+            --neural-violet: #3B0F77;
+            --quantum-blue: #0B245E;
+            --ascension-pink: #B0128C;
+            --luminal-magenta: #DA1EAE;
+            --deep-charcoal: #2B2B33;
+            --gentle-lavender: #A9A8BD;
+            --off-white: #F4F4F8;
+            --light-gray: #E8E8EF;
+            
+            /* Shadows */
+            --card-shadow: 0 10px 30px rgba(11, 36, 94, 0.07);
+            --card-hover-shadow: 0 15px 40px rgba(11, 36, 94, 0.12);
+            
+            /* Typography */
+            --heading-font: 'Lora', serif;
+            --body-font: 'Inter', sans-serif;
+            
+            /* Gradients */
+            --primary-gradient: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%);
+            --secondary-gradient: linear-gradient(135deg, var(--luminous-white) 0%, #EFF0F9 100%);
+            --accent-gradient: linear-gradient(135deg, var(--ascension-pink) 0%, var(--luminal-magenta) 100%);
+            --btn-secondary-gradient: linear-gradient(135deg, #B0128C 0%, #DA1EAE 50%, #B0128C 100%);
+            --btn-primary-gradient: linear-gradient(135deg, #3B0F77 0%, #0B245E 50%, #3B0F77 100%);
+            --btn-featured-gradient: linear-gradient(135deg, #3B0F77 0%, #B0128C 50%, #3B0F77 100%);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            background-color: var(--luminous-white);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            color: var(--neural-violet);
+            margin-bottom: 0.5em;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        p, li {
+            margin-bottom: 1rem;
+            color: var(--deep-charcoal);
+            font-size: 1.125rem;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--gentle-lavender);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: var(--neural-violet);
+        }
+        
+        /* Buttons */
+/* Base button styles */
+.btn {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Primary button with AI-enhanced gradient */
+.btn-secondary {
+    color: white;
+    background: linear-gradient(135deg, #B0128C 0%, #DA1EAE 50%, #B0128C 100%);
+    background-size: 200% auto;
+    box-shadow: 0 4px 15px rgba(176, 18, 140, 0.25);
+    transition: all 0.5s ease;
+}
+
+.btn-secondary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.1) 100%);
+    z-index: -1;
+    transition: all 0.5s ease;
+    background-size: 200% auto;
+    opacity: 0;
+}
+
+.btn-secondary:hover {
+    background-position: right center;
+    box-shadow: 0 7px 20px rgba(176, 18, 140, 0.4);
+    transform: translateY(-3px);
+}
+
+.btn-secondary:hover::before {
+    opacity: 1;
+    background-position: right center;
+}
+
+/* Secondary button with subtle AI glow */
+.btn-primary {
+    color: var(--luminous-white);
+    background: linear-gradient(135deg, #F9F9FB 0%, #F0F0FF 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(59, 15, 119, 0.1);
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #3B0F77 0%, #0B245E 50%, #3B0F77 100%);
+    background-size: 200% auto;
+    border-radius: 52px;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+
+.btn-primary:hover {
+    color: white;
+    background: transparent;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(59, 15, 119, 0.2);
+}
+
+.btn-primary:hover::before {
+    background-position: right center;
+}
+.btn-featured {
+    color: white;
+    background: linear-gradient(135deg, #3B0F77 0%, #B0128C 50%, #3B0F77 100%);
+    background-size: 200% auto;
+    box-shadow: 0 4px 20px rgba(59, 15, 119, 0.3);
+    transition: all 0.5s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-featured::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, rgba(218, 30, 174, 0.5) 0%, rgba(11, 36, 94, 0.5) 100%);
+    background-size: 200% auto;
+    border-radius: 52px;
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.btn-featured:hover {
+    background-position: right center;
+    box-shadow: 0 7px 25px rgba(59, 15, 119, 0.5);
+    transform: translateY(-3px);
+}
+
+.btn-featured:hover::after {
+    opacity: 0.7;
+    background-position: right center;
+}
+      /* Hero Section */
+.hero {
+  padding: 100px 0 80px;
+  background: linear-gradient(135deg, var(--luminous-white) 0%, #EFF0F9 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background accent element */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-image: url('https://lifehackerzy.pl/assets/images/background/tools-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.05;
+}
+
+/* Container as a flexbox */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hero Content Styling */
+.hero-content {
+  flex: 1;
+  max-width: 600px;
+  padding-right: 20px;
+}
+
+/* Updated badge styling */
+.hero-badge {
+  display: inline-block;
+  background-color: rgba(59, 15, 119, 0.1);
+  color: var(--neural-violet);
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.hero-badge i {
+  margin-right: 8px;
+}
+
+/* Headline and accent text */
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.headline-block {
+  display: block;
+  margin-top: 10px;
+}
+
+.accent-text {
+  color: var(--ascension-pink);
+}
+
+/* Subtitle styling */
+.subtitle {
+  font-size: 1.25rem;
+  margin: 16px 0;
+}
+
+/* Problem list improvements */
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.error-text {
+  color: red;
+}
+
+/* Button styling */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* Hero Image Container */
+.hero-image-container {
+  flex: 1;
+  text-align: center;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+.image-wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  filter: brightness(1.05) drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  
+  .hero-content {
+    padding-right: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-image-container {
+    padding-left: 0;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+        /* Feature Cards */
+        .features {
+            padding: 100px 0;
+            background-color: var(--off-white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 16px;
+            font-size: 2.5rem;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--ascension-pink);
+        }
+        
+        .section-subtitle {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gentle-lavender);
+            font-size: 1.25rem;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--card-hover-shadow);
+        }
+        
+        .card-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .card-icon i {
+            font-size: 2.5rem;
+            color: var(--neural-violet);
+            margin-right: 15px;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--neural-violet);
+            font-weight: 700;
+        }
+        
+        .card-content {
+            flex-grow: 1;
+            margin-bottom: 24px;
+        }
+        
+        .card-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .card-content li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        
+        .card-content li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--ascension-pink);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .card-link {
+            font-weight: 600;
+            color: var(--neural-violet);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .card-link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--luminous-white) 0%, #F2F0FF 100%);
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: "";
+            font-family: var(--heading-font);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(59, 15, 119, 0.1);
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            margin-bottom: 24px;
+            font-size: 1.125rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .testimonial-author-image i {
+            font-size: 1.5rem;
+            color: var(--gentle-lavender);
+        }
+        
+        .testimonial-author-info h5 {
+            font-size: 1.125rem;
+            margin-bottom: 4px;
+            color: var(--deep-charcoal);
+        }
+        
+        .testimonial-author-info p {
+            font-size: 0.9rem;
+            color: var(--gentle-lavender);
+            margin: 0;
+        }
+        
+        /* Program Section */
+        .program {
+            padding: 100px 0;
+            background-color: white;
+        }
+        .timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neural-violet), var(--ascension-pink));
+    transform: translateY(-50%);
+    z-index: -1; /* behind the circles and content */
+}
+
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 16px;
+            width: 4px;
+            height: 100%;
+            background-color: var(--light-gray);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-point {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 36px;
+            height: 36px;
+            background-color: white;
+            border: 4px solid var(--neural-violet);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        .timeline-point i {
+            color: var(--neural-violet);
+            font-size: 1rem;
+        }
+        
+        .timeline-content {
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .timeline-content h4 {
+            margin-bottom: 16px;
+        }
+        
+        .timeline-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .timeline-content li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+        
+        .timeline-content li::before {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--ascension-pink);
+            position: absolute;
+            left: 0;
+            top: 4px;
+            font-size: 0.8rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F9F9FB 0%, #F0F0FF 100%);
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: var(--gentle-lavender);
+            margin-bottom: 16px;
+        }
+        
+        .cta-buttons {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .cta-note {
+            margin-top: 32px;
+            font-style: italic;
+            color: var(--gentle-lavender);
+        }
+        
+        /* About Instructor */
+        .about-instructor {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .instructor-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+        }
+        
+        .instructor-image {
+            flex: 0 0 300px;
+        }
+        
+        .instructor-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .instructor-content {
+            flex: 1;
+        }
+        
+        .instructor-name {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .instructor-title {
+            font-size: 1.25rem;
+            color: var(--gentle-lavender);
+            margin-bottom: 24px;
+        }
+        
+        .instructor-desc {
+            margin-bottom: 24px;
+        }
+        
+        /* Bonus Section */
+        .bonuses {
+            padding: 100px 0;
+            background-color: var(--off-white);
+        }
+        
+        .bonus-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--ascension-pink);
+        }
+        
+        .bonus-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .bonus-number {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--neural-violet);
+            margin-right: 15px;
+        }
+        
+        .bonus-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .bonus-value {
+            display: inline-block;
+            background-color: rgba(176, 18, 140, 0.1);
+            color: var(--ascension-pink);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .bonus-description {
+            font-size: 1.125rem;
+        }
+        
+        .bonus-total {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 40px 0;
+        }
+        
+        /* Options Section */
+        .options {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .option-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 6px solid var(--neural-violet);
+        }
+        
+        .option-badge {
+            display: inline-block;
+            background-color: rgba(59, 15, 119, 0.1);
+            color: var(--neural-violet);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .option-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .option-description {
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        
+        .option-button {
+            margin-top: auto;
+        }
+        
+        /* Stats Counter */
+        .stats-counter {
+            background-color: rgba(59, 15, 119, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .stats-text {
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+        }
+        
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neural-violet);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            background-color: var(--neural-violet);
+            color: white;
+            text-align: center;
+        }
+        
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Feature Box */
+        .feature-box {
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .feature-icon {
+            flex: 0 0 50px;
+            height: 50px;
+            background-color: rgba(59, 15, 119, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .feature-icon i {
+            font-size: 1.5rem;
+            color: var(--neural-violet);
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .feature-text h4 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+        
+        .feature-text p {
+            margin-bottom: 0;
+        }
+        
+        /* For Who */
+        .for-who {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+        
+        .sticky-cta .btn {
+            margin: 0;
+            padding: 12px 24px;
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .trust-badge-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(59, 15, 119, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .trust-badge-icon i {
+            font-size: 2rem;
+            color: var(--neural-violet);
+        }
+        
+        .trust-badge-text {
+            font-weight: 600;
+            color: var(--deep-charcoal);
+        }
+        
+        .trust-badge-subtext {
+            font-size: 0.9rem;
+            color: var(--gentle-lavender);
+            margin-top: 4px;
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--neural-violet);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .shape-2 {
+            bottom: 20%;
+            right: 10%;
+            width: 120px;
+            height: 120px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: var(--ascension-pink);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .shape-3 {
+            top: 60%;
+            left: 15%;
+            width: 60px;
+            height: 60px;
+            background: var(--quantum-blue);
+            transform: rotate(45deg);
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-image {
+                right: -200px;
+                width: 600px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero-image {
+                display: none;
+            }
+            
+            .instructor-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .instructor-image {
+                flex: 0 0 auto;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.875rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 80px 0 50px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+            }
+            
+            .features, .testimonials, .program, .about-instructor, .bonuses, .options, .cta {
+                padding: 60px 0;
+            }
+            
+            .feature-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .timeline-container::before {
+                left: 15px;
+            }
+            
+            .timeline-point {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width:.576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .btn {
+                padding: 14px 24px;
+                font-size: 1rem;
+            }
+            
+            .timeline-item {
+                padding-left: 45px;
+            }
+        }
+
+
+        /* New styles for the "Dwie drogi do Twojej transformacji z AI" section */
+.options-section {
+  margin-bottom: 5rem; /* Similar to Tailwind's mb-20 */
+  max-width: 1200px; /* Adjust to your site's container width */
+  margin: 0 auto;
+  padding: 0 20px; /* Optional: adds horizontal padding on smaller screens */
+}
+
+/* Bootstrap utility classes that might be missing */
+.text-center {
+  text-align: center !important;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem !important; /* 40px */
+}
+.options-section .section-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.875rem; /* Approx text-3xl */
+  font-weight: 700;
+  color: #3B0F77; /* Neural violet */
+}
+.options-section .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+}
+.options-section .options-card {
+  background-color: #fff;
+  border: 1px solid #E1E1E6;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 6px 15px -3px rgba(0, 0, 0, 0.07),
+              0 4px 8px -4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.options-section .options-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.1),
+              0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+.options-section .option-badge {
+  display: inline-block;
+  background-color: #A9A8BD;
+  color: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.options-section .card-title {
+  font-size: 1.5rem; /* Approx text-2xl */
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0B245E; /* Quantum blue */
+}
+.options-section .card-content {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #2B2B33; /* Deep charcoal */
+}
+.options-section .card-content p {
+  margin-bottom: 1rem;
+}
+.options-section .card-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.75rem 0 1rem;
+}
+.options-section .card-content ul li {
+  position: relative;
+  padding-left: 1.5em;
+  margin-bottom: 0.5rem;
+}
+.options-section .card-content ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #B0128C;
+  font-weight: bold;
+}
+.options-section .note {
+  font-size: 0.8rem;
+  color: #A9A8BD;
+  margin-top: 1rem;
+  font-style: italic;
+}
+.options-section .cta-button,
+.options-section .secondary-button {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1.5rem;
+}
+.options-section .cta-button {
+  background-color: #B0128C;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(176, 18, 140, 0.4);
+}
+.options-section .cta-button:hover {
+  background-color: #910f70;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(176, 18, 140, 0.5);
+}
+.options-section .secondary-button {
+  background-color: #0B245E;
+  color: #fff;
+  box-shadow: 0 0 8px rgba(11, 36, 94, 0.3);
+}
+.options-section .secondary-button:hover {
+  background-color: #061a40;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(11, 36, 94, 0.4);
+}
+.options-section .recommendation-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #B0128C, #DA1EAE);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(218, 30, 174, 0.4);
+  white-space: nowrap;
+}
+.options-section .options-card.recommended {
+  border: 2px solid #B0128C;
+  box-shadow: 0 0 25px rgba(176, 18, 140, 0.2),
+              0 6px 15px -3px rgba(0, 0, 0, 0.07),
+              0 4px 8px -4px rgba(0, 0, 0, 0.06);
+}
+.options-section .bonus-preview {
+  background-color: #f9f9fb;
+  border: 1px dashed #A9A8BD;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+.options-section .bonus-preview ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 0;
+}
+.options-section .bonus-preview ul li {
+  margin-bottom: 0.25rem;
+  color: #79788C;
+}
+.options-section .bonus-preview strong {
+  color: #3B0F77;
+}
+.cta-content p.opis {background-color: yellow;}
+
+
+.pricing-section {
+    background-color: #f9f6ff;
+    padding: 30px;
+    border-radius: 16px;
+    margin: 30px 0;
+    border: 2px dashed var(--ascension-pink);
+}
+
+.pricing-container {
+    text-align: center;
+}
+
+.original-value {
+    margin-bottom: 20px;
+}
+
+.price-line-through {
+    text-decoration: line-through;
+    font-size: 1.8rem;
+    color: var(--gentle-lavender);
+    font-weight: 600;
+}
+
+.current-price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--neural-violet);
+    margin: 10px 0;
+}
+
+.savings {
+    display: inline-block;
+    background-color: rgba(176, 18, 140, 0.1);
+    color: var(--ascension-pink);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.price-guarantee {
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--deep-charcoal);
+}
+
+.authentic-message {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(59, 15, 119, 0.05);
+    border-radius: 12px;
+    position: relative;
+    max-width: 80%;
+    
+}
+
+.authentic-message p {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--deep-charcoal);
+    position: relative;
+}
+
+.authentic-message p::before {
+    content: "";
+    font-family: var(--heading-font);
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    font-size: 3rem;
+    color: rgba(59, 15, 119, 0.1);
+    line-height: 1;
+}
+
+.message-author {
+    text-align: right;
+    font-weight: 600;
+    color: var(--neural-violet);
+    margin-top: 10px;
+}
+.gradient-text {
+  background: linear-gradient(to right, var(--quantum-blue), var(--ascension-pink), var(--luminal-magenta));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+/* Journey Visualization Section */
+.journey-visualization {
+    padding: 100px 0;
+    background-color: var(--luminous-white);
+    position: relative;
+    overflow: hidden;
+}
+.journey-visualization::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(242, 240, 255, 0.7) 0%, rgba(249, 249, 251, 0.7) 100%);
+    z-index: 0;
+}
+
+/* Journey Path Container */
+.journey-path {
+    position: relative;
+    max-width: 1100px;
+    margin: 60px auto;
+    z-index: 1;
+}
+/* Horizontal timeline line between stages */
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--neural-violet), var(--ascension-pink));
+    z-index: -1;
+}
+
+/* Journey Stage */
+.journey-stage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    position: relative;
+}
+.journey-stage:nth-child(odd) {
+    flex-direction: row;
+}
+.journey-stage:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Stage Indicator (Number in Circle) */
+.stage-indicator {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 3px solid var(--neural-violet);
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--neural-violet);
+}
+/* For odd stages, position near the boundary on the left side */
+.journey-stage:nth-child(odd) .stage-indicator {
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+/* For even stages, position near the boundary on the right side */
+.journey-stage:nth-child(even) .stage-indicator {
+    right: 40%;
+    transform: translate(50%, -50%);
+}
+
+/* Optional: Waves Background for Journey Path */
+.journey-path::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('[URL_TO_SUBTLE_WAVES_PATTERN]');
+    background-size: cover;
+    opacity: 0.1;
+    z-index: -2;
+}
+
+/* Vessel Styling */
+.journey-vessel {
+    flex: 0 0 40%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.vessel-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+.vessel-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.15));
+    transition: all 0.5s ease;
+}
+.vessel-container:hover {
+    transform: translateY(-10px);
+}
+.vessel-container:hover img {
+    filter: drop-shadow(0px 15px 20px rgba(0, 0, 0, 0.25));
+}
+.vessel-label {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #3B0F77, #B0128C);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(59, 15, 119, 0.2);
+}
+
+/* Journey Content Styling */
+.journey-content {
+    flex: 0 0 60%;
+    padding: 30px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+}
+/* Triangles on content card pointing toward the indicator */
+.journey-stage:nth-child(odd) .journey-content::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 20px 20px 20px 0;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+.journey-stage:nth-child(even) .journey-content::before {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-width: 20px 0 20px 20px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+}
+
+/* Features Styling */
+.journey-features {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 15px;
+}
+.journey-feature {
+    display: flex;
+    align-items: center;
+    background-color: rgba(59, 15, 119, 0.05);
+    padding: 10px 15px;
+    border-radius: 8px;
+    flex: 0 0 calc(50% - 10px);
+}
+.journey-feature i {
+    font-size: 1.2rem;
+    color: var(--ascension-pink);
+    margin-right: 10px;
+}
+
+/* Specific Styling for Different Vessel Types */
+.rowboat img {
+    transform: scale(0.9);
+    opacity: 0.9;
+}
+.motorboat img {
+    transform: scale(1);
+}
+.yacht img {
+    transform: scale(1.1);
+}
+.superyacht img {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 10px 20px rgba(176, 18, 140, 0.3));
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .journey-stage {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    .journey-vessel {
+        margin-bottom: 40px;
+    }
+    .journey-stage:nth-child(odd) .journey-content::before,
+    .journey-stage:nth-child(even) .journey-content::before {
+        display: none;
+    }
+    .journey-feature {
+        flex: 0 0 100%;
+        justify-content: center;
+    }
+    .timeline-line {
+        left: 5%;
+        right: 5%;
+    }
+}
+@media (max-width: 576px) {
+    .vessel-container {
+        height: 150px;
+    }
+}
+
+
+/* Decision Section Styling (updated) */
+.decision-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f7f5ff 0%, #fcf9ff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background elements */
+.decision-section::before,
+.decision-section::after {
+    content: '';
+    position: absolute;
+    background-color: rgba(59, 15, 119, 0.03);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.decision-section::before {
+    width: 600px;
+    height: 600px;
+    bottom: -300px;
+    left: -200px;
+}
+
+.decision-section::after {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    right: -100px;
+}
+
+.decision-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.decision-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #3B0F77 0%, #B0128C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+    text-fill-color: transparent;
+}
+
+.decision-header p {
+    font-size: 1.25rem;
+    color: var(--gentle-lavender);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Options Container */
+.options-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+/* Option Cards */
+.option-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Basic Option */
+.basic-option {
+    border-top: 6px solid #6B7280;
+    align-self: flex-start;
+}
+
+.basic-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Premium Option */
+.premium-option {
+    border-top: 6px solid var(--ascension-pink);
+    box-shadow: 0 15px 40px rgba(176, 18, 140, 0.15);
+    transform: scale(1.05);
+    z-index: 2;
+}
+
+.premium-option:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 50px rgba(176, 18, 140, 0.2);
+}
+
+/* Recommended Badge */
+.recommended-badge {
+    position: absolute;
+    top: -15px;
+    right: 30px;
+    background: linear-gradient(135deg, #B0128C 0%, #DA1EAE 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 5px 15px rgba(176, 18, 140, 0.3);
+}
+
+/* Option Header */
+.option-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.option-badge {
+    display: inline-block;
+    background-color: rgba(107, 114, 128, 0.1);
+    color: #6B7280;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.premium-badge {
+    background-color: rgba(176, 18, 140, 0.1);
+    color: var(--ascension-pink);
+}
+
+.option-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--deep-charcoal);
+}
+
+/* Pricing Container - Premium Option */
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.original-value {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.price-line-through {
+    text-decoration: line-through;
+    font-size: 1.5rem;
+    color: var(--gentle-lavender);
+    font-weight: 600;
+}
+
+.small-text {
+    font-size: 0.9rem;
+    color: var(--gentle-lavender);
+    margin-top: 5px;
+}
+
+.special-offer {
+    text-align: center;
+}
+
+/* Basic Option Price */
+.price-tag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--neural-violet);
+    line-height: 1;
+}
+
+.price-description {
+    font-size: 0.9rem;
+    color: var(--gentle-lavender);
+    margin-top: 5px;
+}
+
+.savings {
+    display: inline-block;
+    background-color: rgba(176, 18, 140, 0.1);
+    color: var(--ascension-pink);
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Features */
+.option-features {
+    margin-bottom: 30px;
+}
+
+.feature-group {
+    margin-bottom: 15px;
+}
+
+.feature-group h4 {
+    font-size: 1rem;
+    color: var(--gentle-lavender);
+    margin-bottom: 10px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.feature-item i {
+    margin-right: 15px;
+    color: #22c55e;
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.feature-item.disabled i {
+    color: #ef4444;
+}
+
+.feature-item.premium i {
+    color: var(--ascension-pink);
+}
+
+.feature-item span {
+    flex: 1;
+}
+
+/* Limited Offer */
+.limited-offer {
+    background: linear-gradient(135deg, rgba(59, 15, 119, 0.05) 0%, rgba(176, 18, 140, 0.05) 100%);
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.limited-offer i {
+    color: #ef4444;
+    margin-right: 10px;
+}
+
+.limited-offer .count {
+    color: var(--neural-violet);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 5px;
+}
+
+/* Buttons */
+.btn-basic {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: white;
+    color: #6B7280;
+    border: 2px solid #6B7280;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-basic:hover {
+    background-color: #6B7280;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px rgba(107, 114, 128, 0.2);
+}
+
+.btn-premium {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #3B0F77 0%, #B0128C 100%);
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(176, 18, 140, 0.25);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: translateX(-100%);
+    transition: all 0.6s ease;
+}
+
+.btn-premium:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(176, 18, 140, 0.35);
+}
+
+.btn-premium:hover::before {
+    transform: translateX(100%);
+}
+
+.btn-subtext {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Authentic Message */
+.authentic-message {
+    background-color: #fffdf9;
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    font-family: 'Caveat', cursive;
+    transform: rotate(-1deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.authentic-message p {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.authentic-message::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 100% 24px;
+    z-index: -1;
+    border-radius: 12px;
+}
+
+.message-author {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #3B0F77;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+/* Workshop Continuity Section */
+.workshop-continuity {
+    display: flex;
+    align-items: center;
+    background-color: rgba(59, 15, 119, 0.03);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.continuity-icon {
+    flex: 0 0 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    background: linear-gradient(135deg, #F9F9FB 0%, #F0F0FF 100%);
+    box-shadow: 0 5px 15px rgba(59, 15, 119, 0.1);
+}
+
+.continuity-icon i {
+    font-size: 1.8rem;
+    background: linear-gradient(135deg, #3B0F77 0%, #B0128C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.continuity-text h4 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    color: var(--neural-violet);
+}
+
+.continuity-text p {
+    font-size: 1rem;
+    color: var(--deep-charcoal);
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .options-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .option-card {
+        max-width: 600px;
+    }
+    
+    .premium-option {
+        transform: scale(1);
+        margin-top: 50px;
+    }
+    
+    .premium-option:hover {
+        transform: translateY(-5px);
+    }
+    
+    .workshop-continuity {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .continuity-icon {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .decision-section {
+        padding: 80px 0;
+    }
+    
+    .decision-header h2 {
+        font-size: 2rem;
+    }
+    
+    .option-card {
+        padding: 30px 20px;
+    }
+    
+    .price {
+        font-size: 2.5rem;
+    }
+    
+    .authentic-message p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Hero Section Layout */
+.hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--luminous-white) 0%, #EFF0F9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 55%;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+/* Hero Image Styling - Updated for Your Headshot */
+/* Enhanced Hero Image Styling */
+.hero-image-container {
+    flex: 0 0 45%;  /* Increase from 40% to 45% */
+    position: relative;
+    z-index: 2;
+    max-width: none;  /* Remove max-width limitation */
+    right: 0;
+    top: 0;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;  /* Increase from 450px */
+    height: auto;
+    border-radius: 20px;
+    position: relative;
+    z-index: 3;
+    transition: transform 0.5s ease;
+    box-shadow: 0 15px 30px rgba(59, 15, 119, 0.2);  /* Stronger shadow */
+}
+
+/* Brighter, more vivid glow effect */
+.image-glow {
+    position: absolute;
+    width: 130%;  /* Wider glow */
+    height: 130%;  /* Taller glow */
+    top: -15%;
+    left: -15%;
+    background: radial-gradient(
+        circle at 30% 30%,
+        rgba(176, 18, 140, 0.6) 0%,  /* More opacity */
+        rgba(59, 15, 119, 0.5) 50%,  /* More opacity */
+        rgba(11, 36, 94, 0.2) 100%   /* More opacity */
+    );
+    filter: blur(40px);  /* Larger blur */
+    opacity: 0.9;  /* Higher opacity */
+    z-index: 1;
+    border-radius: 50%;
+    animation: pulse 4s infinite alternate;
+}
+
+/* More energetic pulse animation */
+@keyframes pulse {
+    0% {
+        opacity: 0.7;
+        transform: scale(0.96);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+}
+
+/* Adjust container for better alignment */
+.hero .container {
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;  /* Reduce gap */
+}
+
+.hero-content {
+    max-width: 52%;  /* Slightly reduce to give more space to image */
+}
+
+/* Media query adjustments */
+@media (max-width: 1200px) {
+    .hero-image {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column-reverse;
+    }
+    
+    .hero-content, .hero-image-container {
+        max-width: 100%;
+    }
+    
+    .hero-image {
+        max-width: 400px;  /* Larger on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        max-width: 350px;  /* Larger on mobile too */
+    }
+}
+/* Custom positioning to align with text */
+.hero-image-container {
+    position: relative;
+    right: -30px; /* Adjust to align with "AI Navigator" text */
+    top: -20px; /* Slight upward adjustment */
+}
+
+/* AI-themed overlay elements */
+.hero-image-container::before,
+.hero-image-container::after {
+    content: "";
+    position: absolute;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.hero-image-container::before {
+    top: -15px;
+    right: -15px;
+    width: 80px;
+    height: 80px;
+    background: rgba(59, 15, 119, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(59, 15, 119, 0.2);
+}
+
+.hero-image-container::after {
+    bottom: -10px;
+    left: -10px;
+    width: 60px;
+    height: 60px;
+    background: rgba(176, 18, 140, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(176, 18, 140, 0.2);
+}
+
+/* Gradient text for hero headline */
+.gradient-text {
+    background: linear-gradient(135deg, #3B0F77 0%, #B0128C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .hero .container {
+        padding: 0 30px;
+    }
+    
+    .hero-content {
+        max-width: 50%;
+    }
+    
+    .hero-image-container {
+        right: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column-reverse; /* Image first on mobile */
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-image-container {
+        flex: 0 0 auto;
+        max-width: 350px;
+        margin-bottom: 40px;
+        right: 0;
+        top: 0;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 0 50px;
+    }
+    
+    .hero-image-container {
+        max-width: 280px;
+    }
+    
+    .hero-image-container::before {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .hero-image-container::after {
+        width: 40px;
+        height: 40px;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&display=swap');
+
+
+    </style>
+</head>
+<body>
+    <!-- Header & Hero Section -->
+    <!-- Hero Section - Improved Version -->
+    <section class="hero">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="container">
+          <div class="hero-content">
+            <!-- Enhanced urgency badge -->
+            <div class="hero-badge animate-fadeInUp">
+              <i class="fas fa-crown"></i> <strong>WARSZTATY NA ŻYWO</strong> - Nie kolejny kurs nagrany. Tylko <span id="remaining-spots">17</span> miejsc!
+            </div>
+            <!-- Impactful headline -->
+            <h1 class="animate-fadeInUp delay-100">
+              <span class="gradient-text">AI Navigator</span>:
+              <span class="headline-block">Transformacyjny Program <span class="accent-text">Praktycznego</span> Wykorzystania AI w Biznesie <em>(i Życiu)</em></span>
+            </h1>
+            <!-- Compelling subtitle -->
+            <p class="subtitle animate-fadeInUp delay-200">
+              "Z odpowiednim przewodnikiem, nauczysz się wykorzystywać AI w praktyce, a nie tylko teoretyzować"
+            </p>
+            <!-- Problem statement -->
+            <p class="animate-fadeInUp delay-300">
+              Podczas gdy inni bombardują Cię teorią, Ty potrzebujesz <strong>praktycznych rozwiązań i rzeczywistych wyników:</strong>
+            </p>
+            <ul class="animate-fadeInUp delay-300">
+              <li><strong class="error-text">Problem:</strong> Masz dość oglądania, jak AI zmienia biznes, zamiast samemu czerpać z tego korzyści</li>
+              <li><strong class="error-text">Problem:</strong> Próbowałeś różnych narzędzi AI, ale konkretne rezultaty wciąż są rozczarowujące</li>
+              <li><strong class="error-text">Problem:</strong> Brakuje Ci możliwości zadania pytań i uzyskania natychmiastowych odpowiedzi</li>
+            </ul>
+            <!-- Evidence + solution statement -->
+            <p class="animate-fadeInUp delay-300">
+              <strong>Fakt:</strong> 76% osób uczących się AI z nagranych kursów nigdy nie wdraża zdobytej wiedzy w praktyce. <br><strong>Dlaczego?</strong> Bez interakcji, praktyki i możliwości zadawania pytań, nawet najlepsza teoria pozostaje tylko teorią.
+            </p>
+            <!-- Clear solution statement -->
+            <p class="animate-fadeInUp delay-300">
+              <strong>AI Navigator to nie kolejny nagrany kurs, ale seria dynamicznych warsztatów LIVE z doświadczonym ekspertem</strong>, gdzie razem budujemy Twoje wdrożenie AI - krok po kroku, w czasie rzeczywistym.
+            </p>
+            <!-- CTA buttons with clearer hierarchy -->
+            <div class="hero-buttons animate-fadeInUp delay-400">
+              <a href="#opcja1" class="btn btn-primary">Zacznij ZA DARMO: Dołącz do pierwszego warsztatu</a>
+              <a href="#opcja2" class="btn btn-secondary">PEŁNY PROGRAM: Zarezerwuj miejsce na wszystkich 4 warsztatach i uzyskaj natychmiastowy dostęp do Społeczności</a>
+            </div>
+          </div>
+          <div class="hero-image-container animate-fadeInUp">
+            <div class="image-wrapper">
+              <img src="LudwikCSiadlak-2025-left.png" alt="Ludwik Siadlak - AI Navigator" class="hero-image">
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    
+    <!-- Why LIVE makes difference -->
+    <!-- Why LIVE makes a difference Section - Improved -->
+<section class="features">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Dlaczego warsztaty LIVE robią <span style="color:var(--ascension-pink)">ogromną</span> różnicę?</h2>
+            <p class="section-subtitle">Potwierdzone przez ponad 450 zadowolonych uczestników moich warsztatów.</p>
+        </div>
+        
+        <!-- Added expert credential intro with clear value proposition -->
+        <div style="background-color: rgba(59, 15, 119, 0.05); padding: 25px; border-radius: 15px; margin-bottom: 30px;">
+            <p><strong>18+ lat doświadczenia w praktyce, nie tylko w teorii.</strong> Przez niemal dwie dekady aktywnie uczestniczyłem w ewolucji technologii - od pierwszych data platform, przez big data, business intelligence, aż po obecną rewolucję AI.</p>
+            <p class="text-center" style="font-weight: 600; margin-top: 15px;">Warsztat LIVE = interakcja + natychmiastowe odpowiedzi + praktyka w czasie rzeczywistym</p>
+        </div>
+        
+        <!-- Enhanced feature boxes with statistics/social proof -->
+        <div class="feature-box">
+            <div class="feature-icon">
+                <i class="fas fa-question-circle"></i>
+            </div>
+            <div class="feature-text">
+                <h4>Natychmiastowe odpowiedzi na Twoje pytania</h4>
+                <p><strong>82% uczestników</strong> wskazuje, że możliwość zadawania pytań w czasie rzeczywistym była kluczowa dla ich sukcesu w implementacji AI. Zamiast frustacji i samotnego szukania rozwiązań, otrzymujesz natychmiastową pomoc.</p>
+            </div>
+        </div>
+        
+        <div class="feature-box">
+            <div class="feature-icon">
+                <i class="fas fa-hands-helping"></i>
+            </div>
+            <div class="feature-text">
+                <h4>Wsparcie "na gorąco" przy wdrożeniu</h4>
+                <p>Nie tylko pokazuję "jak to zrobić" - <strong>robimy to razem, w czasie rzeczywistym</strong>. Gdy napotkasz problem, rozwiązujemy go na miejscu, zamiast zostawiać Cię samego z kolejnym teoretycznym wyjaśnieniem.</p>
+            </div>
+        </div>
+        
+        <div class="feature-box">
+            <div class="feature-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="feature-text">
+                <h4>Społeczność podobnie zmotywowanych osób</h4>
+                <p>Dołączasz do grupy profesjonalistów, którzy, podobnie jak Ty, są zdeterminowani, by wykorzystać AI w praktyce. <strong>91% uczestników</strong> wskazuje, że wymiana doświadczeń z innymi uczestnikami była nieocenionym elementem nauki.</p>
+            </div>
+        </div>
+        
+        <div class="feature-box">
+            <div class="feature-icon">
+                <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="feature-text">
+                <h4>Rzeczywiste zastosowania, nie teorię</h4>
+                <p>Pracujemy na <strong>Twoich rzeczywistych projektach i wyzwaniach</strong>, nie wymyślonych przykładach. Dzięki temu wdrażasz rozwiązania, które mają natychmiastowy wpływ na Twoją pracę i biznes.</p>
+            </div>
+        </div>
+        
+        <!-- Added testimonial preview for stronger social proof -->
+        <div style="background-color: rgba(176, 18, 140, 0.05); padding: 25px; border-radius: 15px; margin-top: 40px; position: relative;">
+            <div style="position: absolute; top: -15px; left: 30px; background: linear-gradient(135deg, var(--ascension-pink) 0%, var(--luminal-magenta) 100%); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 700;">CO MÓWIĄ UCZESTNICY</div>
+            <p style="font-style: italic; margin-top: 10px;">"Byłem na 3 szkoleniach o AI, ale dopiero z Ludwikiem nauczyłem się praktycznie korzystać z tych narzędzi. Różnica między teoretycznym kursem a warsztatem na żywo jest kolosalna - jak między czytaniem o jeździe na rowerze a faktycznym jeżdżeniem."</p>
+            <p style="text-align: right; font-weight: 600; margin-bottom: 0;">— Marek K., Manager ds. Operacyjnych</p>
+        </div>
+        
+        <!-- Enhanced bottom statement with clear value proposition -->
+        <div style="text-align: center; background: linear-gradient(135deg, rgba(59, 15, 119, 0.07) 0%, rgba(176, 18, 140, 0.07) 100%); padding: 25px; border-radius: 15px; margin-top: 40px;">
+            <p style="font-weight: 700; margin: 0; font-size: 1.25rem;">18+ lat doświadczenia w technologiach danych + interaktywne warsztaty LIVE + sprawdzona metodologia wdrożeń = <span style="color:var(--ascension-pink)">Twoja praktyczna transformacja z AI</span></p>
+        </div>
+    </div>
+</section>
+
+<!-- Options -->     
+<!-- Improved Two Options Section -->
+<section class="options-section">
+    <div class="container">
+        <div class="text-center mb-10">
+            <h2 class="section-title">Wybierz swoją ścieżkę transformacji z AI</h2>
+            <p style="max-width: 800px; margin: 0 auto 30px; font-size: 1.1rem;">Bez względu na to, którą opcję wybierzesz, otrzymasz wartość znacznie przekraczającą Twoją inwestycję. Jednak tylko jedna opcja daje Ci pełną transformację i wszystkie korzyści.</p>
+        </div>
+        
+        <!-- Added visual comparison element -->
+        <div style="display: flex; justify-content: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            <div style="flex: 1; text-align: center; padding: 15px; background-color: rgba(59, 15, 119, 0.05); border-radius: 10px 0 0 10px;">
+                <i class="fas fa-seedling" style="font-size: 2rem; color: var(--neural-violet); margin-bottom: 10px;"></i>
+                <h4 style="margin: 0; font-size: 1rem;">PIERWSZY KROK</h4>
+                <p style="margin: 5px 0 0; font-size: 0.9rem;">Poznaj mój styl nauczania</p>
+            </div>
+            <div style="flex: 1; text-align: center; padding: 15px; background-color: rgba(176, 18, 140, 0.1); border-radius: 0 10px 10px 0;">
+                <i class="fas fa-rocket" style="font-size: 2rem; color: var(--ascension-pink); margin-bottom: 10px;"></i>
+                <h4 style="margin: 0; font-size: 1rem;">PEŁNA TRANSFORMACJA</h4>
+                <p style="margin: 5px 0 0; font-size: 0.9rem;">Całościowe wdrożenie AI</p>
+            </div>
+        </div>
+        
+        <div class="cards-grid">
+            <div id="opcja1" class="options-card">
+                <div class="option-badge">OPCJA 1</div>
+                <h3 class="card-title">Pierwszy warsztat <br><span style="color:var(--ascension-pink); font-weight: 700;">(zupełnie bezpłatnie)</span></h3>
+                <div class="card-content">
+                    <p><strong>Dlaczego oferuję pierwszy warsztat za darmo?</strong> Ponieważ wierzę, że ludzie, którzy nie uczą się dziś AI, robią sobie krzywdę. Chcę obniżyć próg wejścia, dając maksimum wartości bez żadnych zobowiązań.</p>
+                    
+                    <!-- Enhanced workshop description with clear benefits -->
+                    <div style="background-color: rgba(59, 15, 119, 0.05); padding: 15px; border-radius: 10px; margin: 20px 0;">
+                        <p style="font-weight: 700; margin-top: 0;">Podczas bezpłatnego warsztatu "Praktyczny System Pracy z AI w Biznesie":</p>
+                        <ul>
+                            <li><strong>Zyskasz:</strong> Gotowy szablon do audytu procesów, które możesz zautomatyzować</li>
+                            <li><strong>Zyskasz:</strong> Własnego asystenta AI skonfigurowanego do Twoich zadań biznesowych</li>
+                            <li><strong>Zyskasz:</strong> Zestaw 5 gotowych szablonów promtów do natychmiastowego wdrożenia</li>
+                            <li><strong>Zyskasz:</strong> Umiejętność wykorzystania AI do analizy danych bez programowania</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Added upcoming workshop dates for urgency -->
+                    <div style="border: 1px dashed var(--gentle-lavender); padding: 12px; border-radius: 8px; margin-top: 25px;">
+                        <p style="font-weight: 600; margin: 0 0 8px;">Nadchodzące terminy warsztatów:</p>
+                        <ul style="margin: 0; padding-left: 20px; font-size: 0.9rem;">
+                            <li>Śr, 14 grudnia, 18:00-21:00 (zostało 8 miejsc)</li>
+                            <li>Wt, 20 grudnia, 18:00-21:00 (zostało 9 miejsc)</li>
+                        </ul>
+                    </div>
+                    
+                    <p class="note" style="margin-top: 20px;">* Po warsztacie zdecydujesz, czy chcesz kontynuować pełną transformację</p>
+                </div>
+                <a href="#zapisz-sie" class="secondary-button">ZAREZERWUJ MIEJSCE ZA DARMO</a>
+            </div>
+            
+            <div id="opcja2" class="options-card recommended">
+                <div class="recommendation-badge">REKOMENDOWANA OPCJA</div>
+                <div class="option-badge">OPCJA 2</div>
+                <h3 class="card-title">Pełny Program Transformacyjny <br><span style="color:var(--ascension-pink);">Natychmiastowy dostęp</span></h3>
+                <div class="card-content">
+                    <p><strong>Zagwarantuj sobie miejsce</strong> w całym cyklu warsztatów i rozpocznij transformację od razu - bez czekania na następne edycje.</p>
+                    
+                    <!-- Enhanced program benefits with icons -->
+                    <div style="background-color: rgba(176, 18, 140, 0.05); padding: 15px; border-radius: 10px; margin: 20px 0;">
+                        <p style="font-weight: 700; margin-top: 0;">Pełny program to kompleksowa transformacja:</p>
+                        <ul style="padding-left: 5px; list-style: none;">
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-video" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                                <span><strong>4 intensywne warsztaty LIVE</strong> - nie nagrania, ale interaktywne sesje z ekspertem</span>
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-users" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                                <span><strong>Społeczność AI Navigators</strong> - wsparcie podobnie myślących profesjonalistów</span>
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-headset" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                                <span><strong>Priorytetowe wsparcie</strong> - Twoje pytania zawsze na pierwszym miejscu</span>
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-file-code" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                                <span><strong>Biblioteka 50+ gotowych promptów</strong> - dostosowanych do polskich realiów biznesowych</span>
+                            </li>
+                            <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                                <i class="fas fa-briefcase" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                                <span><strong>10 case studies z polskich firm</strong> - realne wdrożenia i rezultaty</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Added value calculation -->
+                    <div style="border: 2px dashed var(--ascension-pink); padding: 15px; border-radius: 10px; margin-top: 20px;">
+                        <p style="font-weight: 700; text-align: center; margin-top: 0;">Wartość, którą otrzymujesz:</p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span>4 warsztaty po 3h (12h na żywo)</span>
+                                <strong>1997 zł</strong>
+                            </li>
+                            <li style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span>Biblioteka promptów i case studies</span>
+                                <strong>1297 zł</strong>
+                            </li>
+                            <li style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                                <span>Priorytetowe wsparcie</span>
+                                <strong>997 zł</strong>
+                            </li>
+                            <li style="display: flex; justify-content: space-between; border-top: 1px solid #eee; padding-top: 8px; margin-top: 8px; font-weight: 700;">
+                                <span>Podstawowa wartość</span>
+                                <span>4291 zł</span>
+                            </li>
+                        </ul>
+                        <p style="text-align: center; margin-bottom: 0; font-weight: 700;">+ Bonusy warte łącznie 19,988 zł!</p>
+                    </div>
+                    
+                    <!-- Enhanced bonus preview -->
+                    <div class="bonus-preview" style="margin-top: 15px; border: 1px solid rgba(176, 18, 140, 0.2);">
+                        <p><strong>Ekskluzywne bonusy tylko dla uczestników pełnego programu:</strong></p>
+                        <ul>
+                            <li><strong style="color:var(--ascension-pink);">BONUS #1:</strong> Nagrania wszystkich sesji LIVE (1997 zł)</li>
+                            <li><strong style="color:var(--ascension-pink);">BONUS #2:</strong> Dostęp do zamkniętej społeczności AI Navigators (2997 zł)</li>
+                            <li><strong style="color:var(--ascension-pink);">BONUS #3:</strong> Udział we wszystkich przyszłych edycjach (4997 zł)</li>
+                            <li><strong style="color:var(--ascension-pink);">BONUS #4:</strong> DOŻYWOTNI dostęp do społeczności Lifehackerów (9997 zł)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Enhanced CTA with price callout -->
+                <div style="background: linear-gradient(135deg, rgba(176, 18, 140, 0.1) 0%, rgba(59, 15, 119, 0.1) 100%); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center;">
+                    <p style="margin: 0; font-size: 0.9rem;">Twoja inwestycja dziś:</p>
+                    <p style="font-size: 2rem; font-weight: 700; margin: 5px 0; color: var(--neural-violet);">Tylko 987 zł</p>
+                    <p style="margin: 0; font-size: 0.9rem;">Oszczędzasz 23,292 zł (96% zniżki!)</p>
+                </div>
+                
+                <a href="#pelny-program" class="cta-button">DOŁĄCZ DO PEŁNEGO PROGRAMU TERAZ!</a>
+            </div>
+        </div>
+        
+        <!-- Added money-back guarantee for trust -->
+        <div style="text-align: center; max-width: 700px; margin: 40px auto 0; padding: 20px; background-color: rgba(59, 15, 119, 0.03); border-radius: 10px;">
+            <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--neural-violet); margin-bottom: 15px;"></i>
+            <h4 style="margin-top: 0;">100% Gwarancja Satysfakcji</h4>
+            <p style="margin-bottom: 0;">Pierwszy warsztat jest całkowicie bezpłatny. Jeśli po nim zdecydujesz się na pełny program i nie będziesz zadowolony po pierwszych dwóch warsztatach, zwrócimy Ci pełną kwotę - bez pytań, bez problemów.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Personal Note Section - Handwritten Style -->
+<!-- Sticky Note Image Section -->
+<div style="max-width: 700px; margin: 50px auto; position: relative; text-align: center;">
+    <!-- Sticky Note Image with shadow -->
+    <div style="display: inline-block; position: relative; transform: rotate(-2deg);">
+        <!-- Drop shadow effect -->
+        <div style="position: absolute; top: 8px; left: 8px; right: -8px; bottom: -8px; background: rgba(0,0,0,0.15); border-radius: 3px; filter: blur(10px); z-index: 1;"></div>
+        
+        <!-- Actual sticky note image -->
+        <img src="sticky.png" alt="Notatka od Ludwika: 'Skandalicznie mało? Tak, wiem. I co z tego? To ja ustalam ceny i chcę, aby te warsztaty były dostępne dla każdego, kto naprawdę chce się rozwijać. AI to zbyt potężne narzędzie, by ograniczać je tylko dla nielicznych.' - Ludwik" style="max-width: 100%; height: auto; position: relative; z-index: 2; border-radius: 2px;">
+    </div>
+    
+    <!-- Optional arrow pointing to pricing -->
+    <div style="position: absolute; bottom: 30px; right: -60px; transform: rotate(30deg); z-index: 3; display: none;" class="d-none d-lg-block">
+        <div style="font-family: 'Caveat', cursive, sans-serif; font-size: 1.2rem; color: var(--ascension-pink); margin-bottom: 5px;">
+            Tak, naprawdę!
+        </div>
+        <svg width="80" height="40" viewBox="0 0 80 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 20 C20 5, 60 35, 75 15 M60 15 L75 15 M75 15 L65 5" stroke="var(--ascension-pink)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+</div>
+    
+    <!-- Program Section -->
+    <!-- Improved Program Section -->
+<section id="program" class="program">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Twoja transformacyjna podróż przez świat AI</h2>
+            <p class="section-subtitle">Kompleksowy program 4 warsztatów, który stopniowo buduje Twoje kompetencje</p>
+        </div>
+        
+        <!-- Added program overview for better context -->
+        <div style="max-width: 800px; margin: 0 auto 50px; background: linear-gradient(135deg, rgba(59, 15, 119, 0.05) 0%, rgba(176, 18, 140, 0.05) 100%); padding: 30px; border-radius: 15px;">
+            <h4 style="text-align: center; margin-top: 0;">Jak zbudowany jest program?</h4>
+            <p>Każdy warsztat to <strong>3 godziny intensywnej, praktycznej nauki</strong> prowadzonej na żywo. Zaczynamy od podstaw, a z każdym kolejnym warsztatem rozwijamy Twoje umiejętności, aż do pełnego wdrożenia AI w Twoim biznesie.</p>
+            <div style="display: flex; justify-content: space-between; text-align: center; margin-top: 25px;">
+                <div style="flex: 1;">
+                    <i class="fas fa-users" style="font-size: 1.5rem; color: var(--neural-violet);"></i>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>Max. 20 osób</strong><br>w grupie</p>
+                </div>
+                <div style="flex: 1;">
+                    <i class="fas fa-clock" style="font-size: 1.5rem; color: var(--neural-violet);"></i>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>3 godziny</strong><br>każdy warsztat</p>
+                </div>
+                <div style="flex: 1;">
+                    <i class="fas fa-calendar-alt" style="font-size: 1.5rem; color: var(--neural-violet);"></i>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>1 warsztat</strong><br>tygodniowo</p>
+                </div>
+                <div style="flex: 1;">
+                    <i class="fas fa-laptop" style="font-size: 1.5rem; color: var(--neural-violet);"></i>
+                    <p style="margin: 5px 0 0; font-size: 0.9rem;"><strong>100% praktyki</strong><br>podczas warsztatów</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="timeline-container">
+            <!-- Enhanced Workshop 1 with outcome statements -->
+            <div class="timeline-item">
+                <div class="timeline-point">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <div class="timeline-content">
+                    <div style="position: absolute; top: -12px; left: 20px; background-color: rgba(59, 15, 119, 0.1); color: var(--neural-violet); padding: 3px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">WARSZTAT 1 (BEZPŁATNY)</div>
+                    <h4 style="margin-top: 15px;">Praktyczny System Pracy z AI w Biznesie</h4>
+                    
+                    <!-- Two-column layout for content -->
+                    <div style="display: flex; margin-top: 20px; gap: 20px;">
+                        <div style="flex: 1; border-right: 1px dashed rgba(59, 15, 119, 0.2); padding-right: 20px;">
+                            <p style="font-weight: 600; color: var(--neural-violet); margin-bottom: 10px;">Co zrobimy razem:</p>
+                            <ul>
+                                <li>Przeprowadzimy audyt procesów do automatyzacji (z szablonem)</li>
+                                <li>Skonfigurujemy Twojego osobistego asystenta AI</li>
+                                <li>Stworzymy pierwsze szablony i zautomatyzowane procesy</li>
+                                <li>Wykorzystamy AI do analizy danych bez znajomości programowania</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1;">
+                            <p style="font-weight: 600; color: var(--ascension-pink); margin-bottom: 10px;">Po warsztacie będziesz potrafił:</p>
+                            <ul>
+                                <li>Zidentyfikować procesy w Twojej pracy, które można zautomatyzować z AI</li>
+                                <li>Skonfigurować i używać własnego asystenta AI do codziennych zadań</li>
+                                <li>Oszczędzić min. 5 godzin tygodniowo dzięki automatyzacji</li>
+                                <li>Analizować dane biznesowe bez umiejętności programowania</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Added success indicator -->
+                    <div style="background-color: rgba(59, 15, 119, 0.05); padding: 12px; border-radius: 8px; margin-top: 20px; display: flex; align-items: center;">
+                        <i class="fas fa-star" style="color: var(--ascension-pink); font-size: 1.5rem; margin-right: 15px;"></i>
+                        <p style="margin: 0; font-style: italic;">Ten warsztat jest całkowicie <strong>bezpłatny</strong> i pozwala Ci doświadczyć mojego stylu nauczania oraz zobaczyć rzeczywiste rezultaty, zanim zdecydujesz się na pełny program.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Workshop 2 with outcome statements -->
+            <div class="timeline-item">
+                <div class="timeline-point">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="timeline-content">
+                    <div style="position: absolute; top: -12px; left: 20px; background-color: rgba(176, 18, 140, 0.1); color: var(--ascension-pink); padding: 3px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">WARSZTAT 2</div>
+                    <h4 style="margin-top: 15px;">Mistrzowska Komunikacja z AI i Generowanie Wartościowych Treści</h4>
+                    
+                    <!-- Two-column layout -->
+                    <div style="display: flex; margin-top: 20px; gap: 20px;">
+                        <div style="flex: 1; border-right: 1px dashed rgba(59, 15, 119, 0.2); padding-right: 20px;">
+                            <p style="font-weight: 600; color: var(--neural-violet); margin-bottom: 10px;">Co zrobimy razem:</p>
+                            <ul>
+                                <li>Opanujemy Framework NAVI do formułowania precyzyjnych instrukcji</li>
+                                <li>Nauczymy się generować treści biznesowe wysokiej jakości</li>
+                                <li>Zbudujemy bibliotekę szablonów dopasowanych do Twoich potrzeb</li>
+                                <li>Przećwiczymy analizę dokumentów i ekstrakcję kluczowych informacji</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1;">
+                            <p style="font-weight: 600; color: var(--ascension-pink); margin-bottom: 10px;">Po warsztacie będziesz potrafił:</p>
+                            <ul>
+                                <li>Formułować instrukcje, które dają dokładnie takie wyniki, jakich potrzebujesz</li>
+                                <li>Tworzyć profesjonalne treści biznesowe w kilka minut zamiast godzin</li>
+                                <li>Analizować dokumenty firmowe i automatycznie wyciągać kluczowe informacje</li>
+                                <li>Generować personalizowaną komunikację dopasowaną do odbiorcy</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Added real business impact -->
+                    <div style="background-color: rgba(176, 18, 140, 0.05); padding: 12px; border-radius: 8px; margin-top: 20px; display: flex; align-items: center;">
+                        <i class="fas fa-chart-line" style="color: var(--ascension-pink); font-size: 1.5rem; margin-right: 15px;"></i>
+                        <p style="margin: 0; font-style: italic;">Uczestnicy poprzednich edycji raportują <strong>70% oszczędności czasu</strong> przy tworzeniu treści biznesowych po tym warsztacie.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Workshop 3 with outcome statements -->
+            <div class="timeline-item">
+                <div class="timeline-point">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="timeline-content">
+                    <div style="position: absolute; top: -12px; left: 20px; background-color: rgba(176, 18, 140, 0.1); color: var(--ascension-pink); padding: 3px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">WARSZTAT 3</div>
+                    <h4 style="margin-top: 15px;">Kompletny Ekosystem Narzędzi AI dla Twojego Biznesu</h4>
+                    
+                    <!-- Two-column layout -->
+                    <div style="display: flex; margin-top: 20px; gap: 20px;">
+                        <div style="flex: 1; border-right: 1px dashed rgba(59, 15, 119, 0.2); padding-right: 20px;">
+                            <p style="font-weight: 600; color: var(--neural-violet); margin-bottom: 10px;">Co zrobimy razem:</p>
+                            <ul>
+                                <li>Dobierzemy zestaw narzędzi AI optymalny dla Twojego biznesu</li>
+                                <li>Wdrożymy standardy bezpieczeństwa danych i zgodności z RODO</li>
+                                <li>Stworzymy materiały graficzne bez umiejętności projektowania</li>
+                                <li>Zautomatyzujemy procesy marketingowe wykorzystując synergię narzędzi</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1;">
+                            <p style="font-weight: 600; color: var(--ascension-pink); margin-bottom: 10px;">Po warsztacie będziesz potrafił:</p>
+                            <ul>
+                                <li>Strategicznie dobierać narzędzia AI do swoich potrzeb biznesowych</li>
+                                <li>Bezpiecznie zarządzać danymi przy pracy z AI (zgodnie z RODO)</li>
+                                <li>Tworzyć profesjonalne materiały marketingowe w ułamku czasu</li>
+                                <li>Zintegrować różne narzędzia AI w jeden skuteczny ekosystem</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Added case study mention -->
+                    <div style="background-color: rgba(176, 18, 140, 0.05); padding: 12px; border-radius: 8px; margin-top: 20px; display: flex; align-items: center;">
+                        <i class="fas fa-lightbulb" style="color: var(--ascension-pink); font-size: 1.5rem; margin-right: 15px;"></i>
+                        <p style="margin: 0; font-style: italic;">Na tym warsztacie przeanalizujemy case study polskiej firmy, która <strong>zaoszczędziła 9800 zł miesięcznie</strong> dzięki wdrożeniu ekosystemu narzędzi AI.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced Workshop 4 with outcome statements -->
+            <div class="timeline-item">
+                <div class="timeline-point">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="timeline-content">
+                    <div style="position: absolute; top: -12px; left: 20px; background-color: rgba(176, 18, 140, 0.1); color: var(--ascension-pink); padding: 3px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">WARSZTAT 4</div>
+                    <h4 style="margin-top: 15px;">Automatyzacja Procesów i Strategia AI dla Twojej Firmy</h4>
+                    
+                    <!-- Two-column layout -->
+                    <div style="display: flex; margin-top: 20px; gap: 20px;">
+                        <div style="flex: 1; border-right: 1px dashed rgba(59, 15, 119, 0.2); padding-right: 20px;">
+                            <p style="font-weight: 600; color: var(--neural-violet); margin-bottom: 10px;">Co zrobimy razem:</p>
+                            <ul>
+                                <li>Przekształcimy pojedyncze narzędzia w zintegrowany system pracy</li>
+                                <li>Stworzymy inteligentne przepływy pracy łączące AI z istniejącymi procesami</li>
+                                <li>Opracujemy długoterminową strategię AI dla Twojej firmy</li>
+                                <li>Przygotujemy Twój zespół do efektywnego korzystania z nowych technologii</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1;">
+                            <p style="font-weight: 600; color: var(--ascension-pink); margin-bottom: 10px;">Po warsztacie będziesz potrafił:</p>
+                            <ul>
+                                <li>Zarządzać zintegrowanym ekosystemem AI w swojej firmie</li>
+                                <li>Wdrażać automatyzacje, które działają nawet podczas Twojego snu</li>
+                                <li>Stworzyć 5-letnią strategię rozwoju AI w Twojej organizacji</li>
+                                <li>Przeprowadzić zespół przez transformację cyfrową bez oporu</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Added results summary -->
+                    <div style="background-color: rgba(176, 18, 140, 0.05); padding: 12px; border-radius: 8px; margin-top: 20px; display: flex; align-items: center;">
+                        <i class="fas fa-trophy" style="color: var(--ascension-pink); font-size: 1.5rem; margin-right: 15px;"></i>
+                        <p style="margin: 0; font-style: italic;">Ten warsztat zamyka pełny cykl Twojej transformacji z AI. Po jego ukończeniu będziesz dysponować <strong>kompletnym systemem</strong> pracy z AI oraz długoterminową strategią rozwoju.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Added after-program support section -->
+        <div style="max-width: 800px; margin: 50px auto 0; text-align: center; background: linear-gradient(135deg, rgba(59, 15, 119, 0.05) 0%, rgba(176, 18, 140, 0.05) 100%); padding: 30px; border-radius: 15px;">
+            <i class="fas fa-infinity" style="font-size: 2.5rem; color: var(--neural-violet); margin-bottom: 15px;"></i>
+            <h4 style="margin-top: 0;">Wsparcie nie kończy się po warsztatach</h4>
+            <p>Dołączając do pełnego programu, otrzymujesz <strong>dożywotni dostęp do społeczności</strong>, co oznacza, że Twoja nauka i rozwój z AI trwają dalej - także wtedy, gdy pojawią się nowe narzędzia i możliwości.</p>
+            <a href="#opcja2" class="btn btn-secondary" style="margin-top: 20px;">Dołącz do pełnego programu</a>
+        </div>
+    </div>
+</section>
+    
+    <!-- Bonuses Section -->
+   <!-- Improved Bonuses Section -->
+<section id="bonusy" class="bonuses">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">EKSKLUZYWNE BONUSY DLA UCZESTNIKÓW PEŁNEGO PROGRAMU</h2>
+            <p class="section-subtitle">Te bonusy same w sobie warte są wielokrotnie więcej niż cała inwestycja w program</p>
+        </div>
+        
+        <!-- Added value meter to visualize total value -->
+        <div style="background: linear-gradient(135deg, rgba(59, 15, 119, 0.05) 0%, rgba(176, 18, 140, 0.05) 100%); padding: 30px; border-radius: 15px; margin-bottom: 40px; text-align: center;">
+            <h4 style="margin-top: 0;">Całkowita wartość bonusów:</h4>
+            <div style="position: relative; height: 30px; background-color: #E1E1E8; border-radius: 15px; margin: 20px 0; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; background: linear-gradient(90deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); border-radius: 15px;"></div>
+                <span style="font-size: x-large;position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: 700; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">19,988 zł</span>
+            </div>
+            <p style="margin-bottom: 0; font-size: 1.1rem;">Dostępne <strong>wyłącznie</strong> dla uczestników pełnego programu</p>
+        </div>
+        
+        <!-- Enhanced Bonus #1 -->
+        <div class="bonus-card" style="position: relative; overflow: hidden;">
+            <!-- Added bonus tag -->
+            <div style="position: absolute; top: 15px; right: -35px; background: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: 700; font-size: 0.9rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                BONUS #1
+            </div>
+            
+            <div class="bonus-header">
+                <h3 class="bonus-title">NAGRANIA WSZYSTKICH SESJI LIVE</h3>
+            </div>
+            <div class="bonus-value">Wartość: 1997 zł</div>
+            
+            <!-- Enhanced description with image and bulleted benefits -->
+            <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 15px;">
+                <div style="flex: 0 0 150px; background-color: rgba(59, 15, 119, 0.05); padding: 15px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-video" style="font-size: 3rem; color: var(--neural-violet); margin-bottom: 10px;"></i>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Pełen dostęp do nagrań</p>
+                </div>
+                <div style="flex: 1;">
+                    <p style="margin-top: 0;"><strong>Nigdy więcej nie przegapisz ważnych treści!</strong> Otrzymasz pełen dostęp do nagrań wszystkich warsztatów Twojej grupy. Dzięki temu:</p>
+                    <ul style="margin-top: 15px;">
+                        <li>Możesz wracać do materiałów w dogodnym dla Ciebie czasie</li>
+                        <li>Utrwalasz zdobytą wiedzę przez wielokrotne przeglądanie</li>
+                        <li>Masz dostęp do pełnej zawartości warsztatów nawet jeśli coś Cię ominie</li>
+                        <li>Posiadasz osobistego eksperta AI na żądanie - zawsze gdy potrzebujesz wsparcia</li>
+                    </ul>
+                    <p style="font-style: italic; font-size: 0.9rem; margin-top: 15px;">* Same nagrania warte są tyle, ile cały program, ale otrzymujesz je jako bonus</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Bonus #2 -->
+        <div class="bonus-card" style="position: relative; overflow: hidden;">
+            <!-- Added bonus tag -->
+            <div style="position: absolute; top: 15px; right: -35px; background: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: 700; font-size: 0.9rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                BONUS #2
+            </div>
+            
+            <div class="bonus-header">
+                <h3 class="bonus-title">DOSTĘP DO ZAMKNIĘTEJ SPOŁECZNOŚCI AI NAVIGATORS</h3>
+            </div>
+            <div class="bonus-value">Wartość: 2997 zł</div>
+            
+            <!-- Enhanced description with image and bulleted benefits -->
+            <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 15px;">
+                <div style="flex: 0 0 150px; background-color: rgba(59, 15, 119, 0.05); padding: 15px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-users" style="font-size: 3rem; color: var(--neural-violet); margin-bottom: 10px;"></i>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Elitarna społeczność</p>
+                </div>
+                <div style="flex: 1;">
+                    <p style="margin-top: 0;"><strong>Nie będziesz sam w swojej podróży z AI!</strong> Dołączysz do ekskluzywnej sekcji w społeczności Lifehackerów, dostępnej tylko dla uczestników programu:</p>
+                    <ul style="margin-top: 15px;">
+                        <li>Regularny networking z profesjonalistami wykorzystującymi AI w biznesie</li>
+                        <li>Wymiana doświadczeń i wspólne rozwiązywanie problemów z wdrożeniami</li>
+                        <li>Dostęp do najnowszych trendów i rozwiązań AI dyskutowanych w społeczności</li>
+                        <li>Możliwość znajdowania partnerów do projektów i nawiązywania współpracy</li>
+                    </ul>
+                    <div style="border-left: 3px solid var(--ascension-pink); padding-left: 15px; margin-top: 15px; font-style: italic;">
+                        <p style="margin: 0; font-size: 0.9rem;">"Społeczność AI Navigators była dla mnie ważniejsza niż same warsztaty - kontakty i współpraca, które nawiązałem, przyczyniły się do podwojenia przychodów mojej firmy." - Piotr K., uczestnik poprzedniej edycji</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Bonus #3 -->
+        <div class="bonus-card" style="position: relative; overflow: hidden;">
+            <!-- Added bonus tag -->
+            <div style="position: absolute; top: 15px; right: -35px; background: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: 700; font-size: 0.9rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                BONUS #3
+            </div>
+            
+            <div class="bonus-header">
+                <h3 class="bonus-title">DOŁĄCZANIE DO WSZYSTKICH PRZYSZŁYCH EDYCJI</h3>
+            </div>
+            <div class="bonus-value">Wartość: 4997 zł</div>
+            
+            <!-- Enhanced description with image and bulleted benefits -->
+            <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 15px;">
+                <div style="flex: 0 0 150px; background-color: rgba(59, 15, 119, 0.05); padding: 15px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-sync-alt" style="font-size: 3rem; color: var(--neural-violet); margin-bottom: 10px;"></i>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Dożywotnie aktualizacje</p>
+                </div>
+                <div style="flex: 1;">
+                    <p style="margin-top: 0;"><strong>Twoja wiedza o AI nigdy się nie zestarzeje!</strong> AI rozwija się błyskawicznie, dlatego otrzymasz możliwość udziału we wszystkich przyszłych edycjach programu:</p>
+                    <ul style="margin-top: 15px;">
+                        <li>Zawsze aktualna wiedza o najnowszych narzędziach i technikach AI</li>
+                        <li>Możliwość odświeżenia umiejętności i nauki nowych funkcji</li>
+                        <li>Dostęp do przyszłych edycji warsztatów bez dodatkowych opłat</li>
+                        <li>Pierwszeństwo w zapisach na specjalne wydarzenia i webinary</li>
+                    </ul>
+                    <div style="background-color: rgba(176, 18, 140, 0.05); border-radius: 8px; padding: 12px; margin-top: 15px;">
+                        <p style="margin: 0; font-size: 0.9rem;"><strong>Wyjątkowa wartość:</strong> W ciągu tylko ostatniego roku zorganizowałem 5 edycji warsztatów z AI, każda z nową zawartością dostosowaną do bieżących zmian. Ta aktualizacja wiedzy sama w sobie warta jest wielokrotność ceny programu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Bonus #4 (with extra emphasis) -->
+        <div class="bonus-card" style="position: relative; overflow: hidden; border: 2px solid var(--ascension-pink); box-shadow: 0 15px 30px rgba(176, 18, 140, 0.15);">
+            <!-- Added bonus tag -->
+            <div style="position: absolute; top: 15px; right: -35px; background: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: 700; font-size: 0.9rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                BONUS #4
+            </div>
+            
+            <!-- Added special value badge -->
+            <div style="position: absolute; top: 20px; left: 20px; background-color: var(--ascension-pink); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">
+                NAJWIĘKSZA WARTOŚĆ
+            </div>
+            
+            <div class="bonus-header" style="padding-top: 15px; margin-top: 15px;">
+                <h3 class="bonus-title">DOŻYWOTNI DOSTĘP DO SPOŁECZNOŚCI LIFEHACKERÓW</h3>
+            </div>
+            <div class="bonus-value">Wartość: 9997 zł</div>
+            
+            <!-- Enhanced description with image and bulleted benefits -->
+            <div style="display: flex; align-items: flex-start; gap: 30px; margin-top: 15px;">
+                <div style="flex: 0 0 150px; background-color: rgba(176, 18, 140, 0.05); padding: 15px; border-radius: 10px; text-align: center;">
+                    <i class="fas fa-key" style="font-size: 3rem; color: var(--ascension-pink); margin-bottom: 10px;"></i>
+                    <p style="margin: 0; font-size: 0.9rem; font-weight: 600;">Ekskluzywny dożywotni dostęp</p>
+                </div>
+                <div style="flex: 1;">
+                    <p style="margin-top: 0;"><strong>To nie pomyłka - otrzymujesz DOŻYWOTNI dostęp do całej społeczności Lifehackerów!</strong> To najbardziej wartościowy bonus, który sam w sobie jest wart wielokrotnie więcej niż cena całego programu:</p>
+                    <ul style="margin-top: 15px; padding-left: 5px; list-style: none;">
+                        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                            <span><strong>Udział we wszystkich webinarach i warsztatach</strong> organizowanych dla społeczności</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                            <span><strong>Dostęp do wszystkich Protipów i materiałów ekskluzywnych</strong> z różnych obszarów rozwoju</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                            <span><strong>Bezpośredni dostęp do mnie</strong> podczas codziennych sesji 12:34-daily-coaching</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                            <span><strong>Możliwość konsultowania swoich wyzwań</strong> z AI, technologią i innymi obszarami rozwoju</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 3px;"></i>
+                            <span><strong>Przynależność do elitarnej grupy osób</strong>, które nieustannie się rozwijają i wspierają</span>
+                        </li>
+                    </ul>
+                    <div style="background: linear-gradient(135deg, rgba(176, 18, 140, 0.05) 0%, rgba(59, 15, 119, 0.05) 100%); border-radius: 8px; padding: 12px; margin-top: 15px; display: flex; align-items: center;">
+                        <i class="fas fa-info-circle" style="font-size: 1.5rem; color: var(--ascension-pink); margin-right: 15px; flex-shrink: 0;"></i>
+                        <p style="margin: 0; font-size: 0.9rem;"><strong>Ważne:</strong> Standardowy roczny dostęp do społeczności Lifehackerów kosztuje 2997 zł. Dostęp dożywotni nie jest publicznie dostępny w żadnej ofercie - to absolutnie unikalna możliwość, dostępna tylko dla uczestników pełnego programu AI Navigator.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced bonus total section -->
+        <div style="margin: 50px auto 0; max-width: 800px; background: linear-gradient(135deg, rgba(59, 15, 119, 0.07) 0%, rgba(176, 18, 140, 0.07) 100%); padding: 30px; border-radius: 15px; text-align: center; position: relative;">
+            <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: white; padding: 5px 20px; border-radius: 20px; font-weight: 700; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                PODSUMOWANIE WARTOŚCI
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed rgba(59, 15, 119, 0.2);">
+                <div style="text-align: left; font-weight: 600;">Wartość podstawowa programu:</div>
+                <div style="font-weight: 700;">1,997 zł</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <div style="text-align: left;">Bonus #1: Nagrania sesji LIVE</div>
+                <div>1,997 zł</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <div style="text-align: left;">Bonus #2: Społeczność AI Navigators</div>
+                <div>2,997 zł</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                <div style="text-align: left;">Bonus #3: Wszystkie przyszłe edycje</div>
+                <div>4,997 zł</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                <div style="text-align: left; font-weight: 600;">Bonus #4: Dożywotni dostęp do społeczności</div>
+                <div style="font-weight: 600;">9,997 zł</div>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-top: 15px; padding-top: 15px; border-top: 2px solid rgba(59, 15, 119, 0.3); font-weight: 700; font-size: 1.2rem;">
+                <div style="text-align: left;">Łączna wartość:</div>
+                <div>21,985 zł</div>
+            </div>
+            <div style="margin-top: 25px; padding: 15px; background-color: var(--ascension-pink); color: white; border-radius: 10px; font-weight: 700; font-size: 1.3rem;">
+                Twoja inwestycja dziś: TYLKO 987 zł
+            </div>
+            <p style="margin-top: 15px; font-size: 0.9rem; font-style: italic;">To oznacza, że oszczędzasz ponad 20,998 zł (95% zniżki)!</p>
+            
+            <a href="#pelny-program" class="btn btn-secondary" style="margin-top: 25px; font-size: 1.2rem; padding: 15px 30px;">
+                DOŁĄCZ DO PEŁNEGO PROGRAMU TERAZ
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Testimonials Section -->
+   <!-- Improved Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Realne Historie Transformacji</h2>
+            <p class="section-subtitle">Posłuchaj, co mówią uczestnicy poprzednich edycji warsztatów</p>
+        </div>
+        
+        <!-- Added success statistics -->
+        <div style="display: flex; justify-content: space-between; max-width: 900px; margin: 0 auto 50px; text-align: center; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 200px; background-color: rgba(59, 15, 119, 0.05); padding: 20px; border-radius: 12px;">
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--neural-violet);">94%</div>
+                <p style="margin: 0; font-weight: 600;">uczestników wdraża AI<br>w ciągu 7 dni</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; background-color: rgba(59, 15, 119, 0.05); padding: 20px; border-radius: 12px;">
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--neural-violet);">15h+</div>
+                <p style="margin: 0; font-weight: 600;">średnia tygodniowa<br>oszczędność czasu</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; background-color: rgba(59, 15, 119, 0.05); padding: 20px; border-radius: 12px;">
+                <div style="font-size: 2.5rem; font-weight: 700; color: var(--neural-violet);">89%</div>
+                <p style="margin: 0; font-weight: 600;">deklaruje zwiększenie<br>produktywności</p>
+            </div>
+        </div>
+        
+        <!-- Enhanced testimonial cards -->
+        <div class="cards-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card" style="position: relative; overflow: hidden;">
+                <!-- Added result banner -->
+                <div style="position: absolute; top: 15px; right: -35px; background: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: 600; font-size: 0.8rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                    OSZCZĘDNOŚĆ 8h/TYDZIEŃ
+                </div>
+                
+                <div class="testimonial-content">
+                    "Przeszedłem przez różne kursy AI, ale <strong>dopiero warsztaty Ludwika pokazały mi praktyczne zastosowania</strong>. Po pierwszym warsztacie zautomatyzowałem odpowiedzi na powtarzalne zapytania klientów. Możliwość zadawania pytań na żywo była kluczowa - miałem specyficzny przypadek, którego żaden kurs online by nie przewidział. Ludwik pomógł mi stworzyć rozwiązanie na miejscu. Zyskuję teraz około <strong>8 godzin tygodniowo</strong>, które mogę poświęcić na rozwój biznesu."
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-image" style="background-color: var(--neural-violet); color: white;">
+                        <span style="font-weight: 700;">M</span>
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h5>Marek K.</h5>
+                        <p>Właściciel agencji marketingowej</p>
+                    </div>
+                </div>
+                
+                <!-- Added specific result -->
+                <div style="margin-top: 15px; background-color: rgba(59, 15, 119, 0.05); padding: 12px; border-radius: 8px; font-size: 0.9rem;">
+                    <strong>Główne rezultaty:</strong> Automatyzacja obsługi powtarzalnych zapytań klientów, oszczędność 8 godzin tygodniowo, zwiększenie skupienia na strategicznym rozwoju biznesu
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card" style="position: relative; overflow: hidden;">
+                <!-- Added result banner -->
+                <div style="position: absolute; top: 15px; right: -35px; background: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: 600; font-size: 0.8rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                    REDUKCJA CZASU O 70%
+                </div>
+                
+                <div class="testimonial-content">
+                    "Przeszłam wcześniej <strong>dwa nagrywane kursy AI, które były stratą czasu</strong>. AI Navigator był inny – interaktywność warsztatów pozwoliła mi od razu wdrażać wiedzę. Skróciłam czas przygotowania raportów o 70%, a możliwość zadawania pytań na żywo była bezcenna. <strong>Różnica między uczeniem się z nagranego kursu a warsztatami live jest kolosalna</strong> - to jak czytanie o jeździe na rowerze vs. faktyczna nauka jazdy z instruktorem."
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-image" style="background-color: var(--ascension-pink); color: white;">
+                        <span style="font-weight: 700;">A</span>
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h5>Anna W.</h5>
+                        <p>Analityk finansowy</p>
+                    </div>
+                </div>
+                
+                <!-- Added specific result -->
+                <div style="margin-top: 15px; background-color: rgba(176, 18, 140, 0.05); padding: 12px; border-radius: 8px; font-size: 0.9rem;">
+                    <strong>Główne rezultaty:</strong> Redukcja czasu przygotowania raportów o 70%, wdrożenie niestandardowych analiz, które wcześniej wydawały się niemożliwe do wykonania
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card" style="position: relative; overflow: hidden;">
+                <!-- Added result banner -->
+                <div style="position: absolute; top: 15px; right: -35px; background: linear-gradient(135deg, var(--neural-violet) 0%, var(--ascension-pink) 100%); color: white; padding: 5px 40px; transform: rotate(45deg); font-weight: 600; font-size: 0.8rem; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+                    OSZCZĘDNOŚĆ 15,000 zł/m-c
+                </div>
+                
+                <div class="testimonial-content">
+                    "Format warsztatów LIVE sprawił, że <strong>wreszcie zacząłem UŻYWAĆ AI</strong>, a nie tylko o niej słuchać. Możliwość natychmiastowej konsultacji, gdy napotkałem problem, była przełomowa. Teraz tworzę materiały marketingowe w kilka minut, a pytania zadane podczas warsztatów zaoszczędziły mi miesięcy samodzielnego zgadywania. <strong>Oszczędności? Ponad 15,000 zł miesięcznie</strong> na outsourcingu i 20 godzin tygodniowo mojego czasu."
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-image" style="background-color: var(--quantum-blue); color: white;">
+                        <span style="font-weight: 700;">P</span>
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h5>Piotr T.</h5>
+                        <p>Dyrektor operacyjny</p>
+                    </div>
+                </div>
+                
+                <!-- Added specific result -->
+                <div style="margin-top: 15px; background-color: rgba(11, 36, 94, 0.05); padding: 12px; border-radius: 8px; font-size: 0.9rem;">
+                    <strong>Główne rezultaty:</strong> Oszczędność 15,000 zł miesięcznie na outsourcingu, odzyskanie 20 godzin tygodniowo, przeniesienie zasobów na strategiczne projekty
+                </div>
+            </div>
+        </div>
+        
+        <!-- Added video testimonial section -->
+        <div style="max-width: 800px; margin: 50px auto 0; background: linear-gradient(135deg, rgba(59, 15, 119, 0.05) 0%, rgba(176, 18, 140, 0.05) 100%); padding: 30px; border-radius: 15px; text-align: center;">
+            <h4 style="margin-top: 0; font-size: 1.4rem;">Zobacz, co mówią uczestnicy</h4>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background-color: #f9f9fb; border-radius: 10px; margin: 20px 0; cursor: pointer; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);" onclick="alert('Tutaj będzie odtwarzane rzeczywiste wideo z recenzjami uczestników')">
+                <!-- Video placeholder -->
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+                    <i class="fas fa-play-circle" style="font-size: 3rem; color: var(--ascension-pink); margin-bottom: 15px;"></i>
+                    <p style="margin: 0; font-weight: 600;">Kliknij, aby obejrzeć wideo</p>
+                </div>
+            </div>
+            <p style="margin-bottom: 0; font-style: italic; font-size: 0.9rem;">Nagrania z uczestnikami poprzednich edycji programu</p>
+        </div>
+        
+        <!-- Added trust indicators -->
+        <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; margin-top: 50px;">
+            <div style="text-align: center;">
+                <i class="fas fa-users" style="font-size: 2rem; color: var(--gentle-lavender);"></i>
+                <p style="margin: 10px 0 0; font-weight: 600;">450+ uczestników</p>
+                <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--gentle-lavender);">w 5 edycjach warsztatów</p>
+            </div>
+            <div style="text-align: center;">
+                <i class="fas fa-star" style="font-size: 2rem; color: var(--gentle-lavender);"></i>
+                <p style="margin: 10px 0 0; font-weight: 600;">4.9/5 średnia ocena</p>
+                <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--gentle-lavender);">w ankietach poszkoleniowych</p>
+            </div>
+            <div style="text-align: center;">
+                <i class="fas fa-sync-alt" style="font-size: 2rem; color: var(--gentle-lavender);"></i>
+                <p style="margin: 10px 0 0; font-weight: 600;">83% uczestników</p>
+                <p style="margin: 5px 0 0; font-size: 0.8rem; color: var(--gentle-lavender);">wraca na kolejne edycje</p>
+            </div>
+        </div>
+        
+        <!-- Added CTA -->
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="#opcja2" class="btn btn-secondary" style="padding: 15px 30px;">Dołącz do grona uczestników, którzy osiągają realne rezultaty</a>
+        </div>
+    </div>
+</section>
+
+
+       
+
+<!-- Improved Journey Visualization Section -->
+ <section class="journey-visualization">
+    <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+            <h2 class="section-title" style="position: relative; display: inline-block;">
+                Twoja Transformacja z AI w Obrazowej Metaforze
+                <!-- Added decorative underline -->
+                <div style="position: absolute; bottom: -10px; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, rgba(59, 15, 119, 0.3), rgba(176, 18, 140, 0.7), rgba(59, 15, 119, 0.3));"></div>
+            </h2>
+            <p class="section-subtitle" style="max-width: 700px; margin: 20px auto 0;">Wyobraź sobie, że Twoja podróż z AI przypomina... <strong>łódkę</strong>.</p>
+        </div>
+        
+        <!-- Added journey intro -->
+        <div style="max-width: 800px; margin: 0 auto 60px; background-color: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);">
+            <h3 style="text-align: center; margin-top: 0; color: var(--neural-violet);">Wizualne podsumowanie warsztatów</h3>
+            <p style="margin-bottom: 0;">Ta wizualizacja pomoże Ci zrozumieć, jak każdy warsztat stopniowo buduje Twoje umiejętności, skuteczność i możliwości w pracy z AI. <strong>Z każdym etapem Twoja "łódź" staje się bardziej zaawansowana</strong>, umożliwiając Ci szybsze i efektywniejsze poruszanie się przez morze informacji i zadań.</p>
+        </div>
+        
+        
+        <div class="journey-path">
+            <!-- Horizontal line behind all stages -->
+            <div class="timeline-line"></div>
+
+            <!-- Stage 1 -->
+            <div class="journey-stage">
+                <div class="stage-indicator">1</div>
+                <div class="journey-vessel rowboat">
+                    <!-- vessel image and label -->
+                    <div class="vessel-container">
+                        <img src="AI-Navigator-transformation-1.png" alt="Rowboat" />
+                        <div class="vessel-label">ETAP 1</div>
+                    </div>
+                </div>
+                <div class="journey-content">
+                    <h4>Praktyczny Start w AI</h4>
+                    <p class="subtitle">Zaczynasz jak większość – z podstawowymi narzędziami.</p>
+                    <div class="journey-features">
+                        
+                        <div style="display: flex; margin-top: 20px; gap: 20px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <h5 style="font-size: 1rem; color: var(--neural-violet); margin-top: 0;">Twoja obecna sytuacja:</h5>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li>Mozolnie "wiosłujesz" przez morze informacji</li>
+                                    <li>Duży wysiłek przy podstawowych zadaniach</li>
+                                    <li>Powolny postęp pomimo ciężkiej pracy</li>
+                                    <li>Frustracja przy próbach korzystania z AI</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="flex: 1; min-width: 200px;">
+                                <h5 style="font-size: 1rem; color: var(--ascension-pink); margin-top: 0;">Po warsztacie:</h5>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li>Pierwszy zestaw narzędzi AI do codziennych zadań</li>
+                                    <li>Podstawowa automatyzacja powtarzalnych procesów</li>
+                                    <li>Usprawnienie komunikacji z AI</li>
+                                    <li>Początkowe oszczędności czasu (ok. 3-5 godz./tydz.)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="journey-stage">
+                <div class="stage-indicator">2</div>
+                <div class="journey-vessel motorboat">
+                    <div class="vessel-container">
+                        <img src="AI-Navigator-transformation-2.png" alt="Motorboat" />
+                        <div class="vessel-label">ETAP 2</div>
+                    </div>
+                </div>
+                <div class="journey-content">
+                    <h4>Przyspieszenie z AI</h4>
+                    <p class="subtitle">Instalujesz pierwszy "silnik" i automatyzujesz zadania.</p>
+                    <div class="journey-features">
+                        
+                    <div style="display: flex; margin-top: 20px; gap: 20px; flex-wrap: wrap;">
+                        <div style="flex: 1; min-width: 200px;">
+                            <h5 style="font-size: 1rem; color: var(--neural-violet); margin-top: 0;">Co się zmienia:</h5>
+                            <ul style="padding-left: 20px; margin-bottom: 0;">
+                                <li>Znacznie szybsza praca dzięki Frameworkowi NAVI</li>
+                                <li>Precyzyjna komunikacja z AI dająca lepsze rezultaty</li>
+                                <li>Efektywne generowanie wysokiej jakości treści</li>
+                                <li>Automatyczna analiza dokumentów i informacji</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="flex: 1; min-width: 200px;">
+                            <h5 style="font-size: 1rem; color: var(--ascension-pink); margin-top: 0;">Twoje korzyści:</h5>
+                            <ul style="padding-left: 20px; margin-bottom: 0;">
+                                <li>Redukcja czasu na tworzenie treści o 70%</li>
+                                <li>Personalizacja komunikacji na dużą skalę</li>
+                                <li>Biblioteka szablonów do różnych zastosowań</li>
+                                <li>Oszczędność czasu (ok. 8-12 godz./tydz.)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="journey-stage">
+                <div class="stage-indicator">3</div>
+                <div class="journey-vessel yacht">
+                    <div class="vessel-container">
+                        <img src="AI-Navigator-transformation-3.png" alt="Yacht" />
+                        <div class="vessel-label">ETAP 3</div>
+                    </div>
+                </div>
+                <div class="journey-content">
+                    <h4>Komfort i Możliwości</h4>
+                    <p class="subtitle">Przesiadasz się na "jacht" z ekosystemem narzędzi AI.</p>
+                    <div class="journey-features">
+                        <div style="display: flex; margin-top: 20px; gap: 20px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <h5 style="font-size: 1rem; color: var(--neural-violet); margin-top: 0;">Co się zmienia:</h5>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li>Strategiczny dobór narzędzi AI dla Twojego biznesu</li>
+                                    <li>Profesjonalne wdrożenie zasad bezpieczeństwa (RODO)</li>
+                                    <li>Zaawansowane tworzenie materiałów wizualnych</li>
+                                    <li>Synchronizacja różnych narzędzi w jeden ekosystem</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="flex: 1; min-width: 200px;">
+                                <h5 style="font-size: 1rem; color: var(--ascension-pink); margin-top: 0;">Twoje korzyści:</h5>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li>Kompleksowa obsługa procesów od A do Z</li>
+                                    <li>Bezpieczne zarządzanie danymi w zgodzie z RODO</li>
+                                    <li>Profesjonalne materiały marketingowe bez grafików</li>
+                                    <li>Oszczędności finansowe (śr. 5,000-15,000 zł/mc)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 4 -->
+            <div class="journey-stage">
+                <div class="stage-indicator">4</div>
+                <div class="journey-vessel superyacht">
+                    <div class="vessel-container">
+                        <img src="AI-Navigator-transformation-4.png" alt="Superyacht" />
+                        <div class="vessel-label">ETAP 4</div>
+                    </div>
+                </div>
+                <div class="journey-content">
+                    <h4>Mistrzostwo i Autonomia</h4>
+                    <p class="subtitle">Cyber-superjacht: pełna automatyzacja i zaawansowane systemy AI.</p>
+                    <div class="journey-features">
+                        <div style="display: flex; margin-top: 20px; gap: 20px; flex-wrap: wrap;">
+                            <div style="flex: 1; min-width: 200px;">
+                                <h5 style="font-size: 1rem; color: var(--neural-violet); margin-top: 0;">Co się zmienia:</h5>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li>Integracja pojedynczych narzędzi w całościowy system</li>
+                                    <li>Inteligentne przepływy pracy między AI a procesami</li>
+                                    <li>Długoterminowa strategia AI dla Twojej organizacji</li>
+                                    <li>Przygotowanie zespołu do efektywnej pracy z AI</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="flex: 1; min-width: 200px;">
+                                <h5 style="font-size: 1rem; color: var(--ascension-pink); margin-top: 0;">Twoje korzyści:</h5>
+                                <ul style="padding-left: 20px; margin-bottom: 0;">
+                                    <li>Systemy działające autonomicznie 24/7</li>
+                                    <li>Strategiczna przewaga konkurencyjna na rynku</li>
+                                    <li>Zdolność do szybkiego adaptowania nowych narzędzi AI</li>
+                                    <li>Pozycja lidera transformacji w swojej branży</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!-- Added final result -->
+            <div style="max-width: 800px; margin: 60px auto 0; text-align: center; background: linear-gradient(135deg, rgba(59, 15, 119, 0.05) 0%, rgba(176, 18, 140, 0.05) 100%); padding: 30px; border-radius: 15px;">
+                <i class="fas fa-trophy" style="font-size: 2.5rem; color: var(--neural-violet); margin-bottom: 15px;"></i>
+                <h3 style="color: var(--neural-violet); margin-top: 0;">Efekt końcowy: Od mozolnego wiosłowania do pełnej automatyzacji</h3>
+                <p>Po przejściu wszystkich 4 warsztatów osiągasz stan, w którym AI pracuje <strong>dla Ciebie</strong>, a nie odwrotnie. Zamiast tracić czas na powtarzalne zadania, skupiasz się na strategicznych decyzjach i kreatywnym rozwoju swojego biznesu.</p>
+                <p style="font-weight: 600; margin-bottom: 0; color: var(--ascension-pink);">Dołącz do programu i zacznij swoją transformację już dziś!</p>
+                
+                <!-- Added calls to action -->
+                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+                    <a href="#opcja1" class="btn btn-primary">Zacznij od bezpłatnego warsztatu</a>
+                    <a href="#opcja2" class="btn btn-secondary">Przejdź całą transformację z AI</a>
+                </div>
+            </div>
+        </div>
+</section>
+
+    
+<!-- CTA Section -->
+<!-- Decision Section -->
+<section id="decision-section" class="decision-section">
+    <div class="container">
+        <div class="decision-header">
+            <h2>Wybierz swoją ścieżkę transformacji z&nbsp;AI</h2>
+            <p>Pierwszy warsztat jest zawsze bezpłatny - poznaj mój styl nauczania bez żadnego ryzyka</p>
+        </div>
+
+        <div class="options-container">
+            <!-- Option 1: Free Workshop -->
+            <div class="option-card basic-option">
+                <div class="option-header">
+                    <div class="option-badge">OPCJA 1</div>
+                    <h3>Pojedynczy Warsztat</h3>
+                    <div class="price-tag">
+                        <span class="price">0 zł</span>
+                        <span class="price-description">Pierwszy warsztat bezpłatny</span>
+                    </div>
+                </div>
+
+                <div class="option-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Udział w pierwszym warsztacie na żywo</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Praktyczne wprowadzenie do AI w biznesie</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Podstawowe szablony do pracy z AI</span>
+                    </div>
+                    <div class="feature-item disabled">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Brak dostępu do warsztatów 2, 3 i 4</span>
+                    </div>
+                    <div class="feature-item disabled">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Brak dostępu do społeczności AI Navigators</span>
+                    </div>
+                    <div class="feature-item disabled">
+                        <i class="fas fa-times-circle"></i>
+                        <span>Brak ekskluzywnych bonusów</span>
+                    </div>
+                </div>
+
+                <a href="https://lifehackerzy.pl/ai-navigator-warsztat" class="btn btn-basic">
+                    DOŁĄCZ BEZPŁATNIE
+                    <span class="btn-subtext">do pierwszego warsztatu</span>
+                </a>
+            </div>
+
+            <!-- Option 2: Full Program (Premium) -->
+            <div class="option-card premium-option">
+                <div class="recommended-badge">REKOMENDOWANE</div>
+                
+                <div class="option-header">
+                    <div class="option-badge premium-badge">OPCJA 2</div>
+                    <h3>Pełny Program Transformacyjny</h3>
+                    <div class="pricing-container">
+                        <div class="original-value">
+                            <div class="price-line-through">21,985 zł</div>
+                            <div class="small-text">Program (1997 zł) + Bonusy (19,988 zł)</div>
+                        </div>
+                        <div class="special-offer">
+                            <span class="price">987 zł</span>
+                            <div class="savings">Oszczędzasz 20,998 zł (95%)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="option-features">
+                    <div class="feature-group">
+                        <h4>Wszystko z Opcji 1, plus:</h4>
+                    </div>
+                    <div class="feature-item premium">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Dostęp do <strong>wszystkich 4 warsztatów</strong> na żywo</span>
+                    </div>
+                    <div class="feature-item premium">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Członkostwo w <strong>zamkniętej społeczności AI Navigators</strong></span>
+                    </div>
+                    <div class="feature-item premium">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Priorytetowe wsparcie podczas sesji Q&A</span>
+                    </div>
+                    <div class="feature-item premium">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Biblioteka 50+ gotowych promptów biznesowych</span>
+                    </div>
+                    <div class="feature-item premium">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Katalog 100 sprawdzonych narzędzi AI</span>
+                    </div>
+                    <div class="feature-item premium">
+                        <i class="fas fa-gem"></i>
+                        <span><strong>BONUS:</strong> DOŻYWOTNI dostęp do społeczności <a href="https://lifehackerzy.pl" target="_blank">Lifehackerzy.pl</a></span>
+                    </div>
+                </div>
+
+                <div class="limited-offer">
+                    <i class="fas fa-fire"></i> Tylko <span class="count">17</span> miejsc pozostało w tej edycji
+                </div>
+
+                <a href="https://lifehackerzy.pl/ai-navigator-program" class="btn btn-premium">
+                    DOŁĄCZ DO PEŁNEGO PROGRAMU
+                    <span class="btn-subtext">za jedyne 987 zł</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="workshop-continuity">
+            <div class="continuity-icon">
+                <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="continuity-text">
+                <h4>Pierwszy warsztat jest 100% bezpłatny</h4>
+                <p>Jeśli nie spełni Twoich oczekiwań, nie płacisz nic dalej. Bez haczyków, bez ukrytych kosztów. To najlepsza gwarancja - doświadczysz mojego stylu nauczania zanim podejmiesz decyzję.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About Instructor -->
+  <!-- Improved About Instructor Section -->
+<section class="about-instructor">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Poznaj swojego przewodnika po świecie AI</h2>
+            <p class="section-subtitle">Doświadczenie, które buduje zaufanie</p>
+        </div>
+        
+        <div class="instructor-container" style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; background: linear-gradient(135deg, rgba(59, 15, 119, 0.03) 0%, rgba(176, 18, 140, 0.03) 100%); padding: 40px; border-radius: 20px;">
+            <!-- Enhanced instructor image with credentials -->
+            <div style="flex: 0 0 300px; position: relative;">
+                <img src="https://lifehackerzy.pl/assets/images/team/ludwik.jpg" alt="Ludwik C. Siadlak" style="width: 100%; border-radius: 15px; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);">
+                
+                <!-- Added credential badges -->
+                <div style="position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); background: white; padding: 10px 20px; border-radius: 50px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); display: flex; gap: 15px; width: 80%;">
+                    <div style="text-align: center; flex: 1;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--neural-violet);">18+</div>
+                        <div style="font-size: 0.8rem; color: var(--gentle-lavender);">lat doświadczenia</div>
+                    </div>
+                    <div style="text-align: center; flex: 1;">
+                        <div style="font-weight: 700; font-size: 1.2rem; color: var(--ascension-pink);">450+</div>
+                        <div style="font-size: 0.8rem; color: var(--gentle-lavender);">uczestników</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced instructor content -->
+            <div style="flex: 1; min-width: 300px;">
+                <h3 style="color: var(--neural-violet); font-size: 1.8rem; margin-top: 0;">Ludwik C. Siadlak</h3>
+                <p style="color: var(--ascension-pink); font-weight: 600; margin-bottom: 25px;">Ekspert technologii danych z 18-letnim doświadczeniem</p>
+                
+                <div class="instructor-desc">
+                    <p>AI Navigator prowadzę ja - <strong>Ludwik C. Siadlak</strong>. Moja przygoda z technologią danych rozpoczęła się 18 lat temu, kiedy to zacząłem pracować przy pierwszych projektach data warehouse dla największych firm w Polsce.</p>
+                    
+                    <p>Od tamtej pory byłem aktywnym uczestnikiem i świadkiem kolejnych rewolucji:</p>
+                    
+                    <div style="display: flex; margin: 20px 0; flex-wrap: wrap; gap: 15px;">
+                        <div style="flex: 1; min-width: 150px; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <div style="font-weight: 700; color: var(--neural-violet);">2005-2010</div>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem;">Era hurtowni danych i Business Intelligence</p>
+                        </div>
+                        <div style="flex: 1; min-width: 150px; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <div style="font-weight: 700; color: var(--neural-violet);">2010-2015</div>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem;">Rewolucja Big Data i analityki predykcyjnej</p>
+                        </div>
+                        <div style="flex: 1; min-width: 150px; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                            <div style="font-weight: 700; color: var(--neural-violet);">2015-2020</div>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem;">Wczesna sztuczna inteligencja i uczenie maszynowe</p>
+                        </div>
+                        <div style="flex: 1; min-width: 150px; background-color: white; padding: 15px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 2px solid var(--ascension-pink);">
+                            <div style="font-weight: 700; color: var(--ascension-pink);">2020-dziś</div>
+                            <p style="margin: 5px 0 0; font-size: 0.9rem;">Era GenAI i transformacyjnych zastosowań AI</p>
+                        </div>
+                    </div>
+                    
+                    <p>W przeciwieństwie do wielu <strong>"ekspertów od wczoraj"</strong>, którzy oferują nagrywane kursy pełne teorii, ja koncentruję się na praktycznych zastosowaniach. Prowadzę <strong>interaktywne warsztaty, gdzie możesz zadawać pytania, otrzymywać natychmiastową pomoc i budować rzeczywiste rozwiązania</strong> - nie tylko słuchać o nich.</p>
+                    
+                    <p>Przez ostatnie 3 lata wprowadziłem w świat AI ponad 450 profesjonalistów, którzy dziś wykorzystują te narzędzia do zmiany swoich firm i karier.</p>
+                    
+                    <!-- Added differentiator section -->
+                    <div style="background-color: white; border-radius: 10px; padding: 20px; margin-top: 25px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <h4 style="margin-top: 0; color: var(--neural-violet);">Czym różnię się od innych ekspertów AI?</h4>
+                        <div style="display: flex; margin-bottom: 15px; gap: 15px; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); font-size: 1.2rem; margin-top: 3px; flex-shrink: 0;"></i>
+                            <div>
+                                <strong>18 lat doświadczenia w technologiach danych</strong> - nie jestem osobą, która "odkryła" AI w 2023 roku.
+                            </div>
+                        </div>
+                        <div style="display: flex; margin-bottom: 15px; gap: 15px; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); font-size: 1.2rem; margin-top: 3px; flex-shrink: 0;"></i>
+                            <div>
+                                <strong>Warsztat na żywo, nie nagrania</strong> - możesz zadać pytanie i otrzymać odpowiedź w momencie, gdy jej potrzebujesz.
+                            </div>
+                        </div>
+                        <div style="display: flex; margin-bottom: 15px; gap: 15px; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); font-size: 1.2rem; margin-top: 3px; flex-shrink: 0;"></i>
+                            <div>
+                                <strong>Sprawdzona metodologia wdrożeń</strong> - nie teoretyzuję, ale pokazuję konkretne przypadki wdrożeń z polskich firm.
+                            </div>
+                        </div>
+                        <div style="display: flex; margin-bottom: 0; gap: 15px; align-items: flex-start;">
+                            <i class="fas fa-check-circle" style="color: var(--ascension-pink); font-size: 1.2rem; margin-top: 3px; flex-shrink: 0;"></i>
+                            <div>
+                                <strong>Społeczność i wsparcie</strong> - nie zostawiam Cię samego po warsztatach, ale zapewniam ciągłe wsparcie.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Added personal message -->
+        <div style="max-width: 800px; margin: 40px auto 0; background-color: white; padding: 30px; border-radius: 15px; border-left: 5px solid var(--neural-violet); position: relative; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            <div style="position: absolute; top: -15px; left: 20px; background-color: var(--neural-violet); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
+                OSOBISTE PRZESŁANIE
+            </div>
+            <p style="font-style: italic; margin-top: 15px;">
+                "Widzę, jak wiele osób zmaga się z wdrożeniem AI w swojej pracy - przytłoczeni informacjami, ale bez praktycznych umiejętności. <strong>Moją misją jest zmiana tego stanu rzeczy</strong>. Nie chcę, żebyś był kolejną osobą, która przejdzie teoretyczny kurs, ale nigdy nie wdroży tej wiedzy. Dlatego stworzyłem format warsztatów na żywo, gdzie pracujemy razem, krok po kroku, nad realnymi wdrożeniami. Jeśli szukasz prawdziwej transformacji, a nie tylko kolejnej porcji teorii - zapraszam Cię do wspólnej podróży."
+            </p>
+            <div style="text-align: right; margin-top: 20px; font-weight: 600; color: var(--neural-violet);">— Ludwik</div>
+        </div>
+        
+        <!-- Added CTA -->
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#opcja1" class="btn btn-primary" style="margin-right: 15px;">Dołącz do pierwszego warsztatu za darmo</a>
+            <a href="#opcja2" class="btn btn-secondary">Rozpocznij pełną transformację z AI</a>
+        </div>
+    </div>
+</section>
+<!-- FAQ Section -->
+<!-- FAQ Section -->
+<section class="faq" style="padding: 100px 0; background: linear-gradient(135deg, #f7f5ff 0%, #fcf9ff 100%); position: relative; overflow: hidden;">
+    <!-- Background elements -->
+    <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(59, 15, 119, 0.05) 0%, rgba(59, 15, 119, 0) 70%); border-radius: 50%; top: -150px; right: 10%;"></div>
+    <div style="position: absolute; width: 200px; height: 200px; background: radial-gradient(circle, rgba(176, 18, 140, 0.05) 0%, rgba(176, 18, 140, 0) 70%); border-radius: 50%; bottom: -50px; left: 10%;"></div>
+    
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Najczęściej zadawane pytania</h2>
+            <p class="section-subtitle">Wszystko, co musisz wiedzieć przed dołączeniem do AI Navigator</p>
+        </div>
+        
+        <!-- FAQ Container -->
+        <div style="max-width: 900px; margin: 50px auto 0;">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Czy muszę mieć doświadczenie z AI, żeby dołączyć do programu?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Zdecydowanie nie! Program AI Navigator został zaprojektowany tak, aby służyć zarówno osobom początkującym, jak i tym, którzy mieli już kontakt z narzędziami AI.</p>
+                        <p>Jeśli jesteś początkujący, zaczniesz od solidnych podstaw, a interaktywny format warsztatów pozwoli Ci zadawać pytania w czasie rzeczywistym i otrzymywać natychmiastową pomoc. Jeśli masz już pewne doświadczenie, zobaczysz jak zbudować spójny ekosystem AI i osiągnąć znacznie bardziej zaawansowane rezultaty niż dotychczas.</p>
+                        <p>Warsztaty są dostosowane do różnych poziomów zaawansowania - każdy uczestnik wychodzi z konkretnymi, praktycznymi umiejętnościami odpowiednimi dla swojego poziomu.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 2 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Co jeśli nie będę mógł uczestniczyć w którymś z warsztatów na żywo?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Nie ma problemu! Rozumiem, że harmonogramy mogą być wymagające, dlatego wszyscy uczestnicy pełnego programu otrzymują dostęp do nagrań warsztatów.</p>
+                        <p>Jeśli przegapisz warsztat na żywo, po prostu obejrzyj nagranie w dogodnym dla Ciebie czasie. Co więcej, nadal możesz zadawać pytania w społeczności AI Navigators, gdzie ja i inni uczestnicy będziemy gotowi pomóc.</p>
+                        <p>Dodatkowo, jako uczestnik pełnego programu, masz dostęp do wszystkich przyszłych edycji, więc zawsze możesz ponownie dołączyć do warsztatu na żywo w następnej turze.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 3 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Czy program jest odpowiedni dla mojej branży?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Zdecydowanie tak. AI Navigator koncentruje się na uniwersalnych zastosowaniach AI, które można wdrożyć w praktycznie każdej branży - od marketingu, przez finanse, edukację, HR, po produkcję czy logistykę.</p>
+                        <p>Dotychczas z programu skorzystali przedsiębiorcy, managerowie, specjaliści marketingu, prawnicy, lekarze, nauczyciele, inżynierowie i wiele innych profesji. Technologia AI jest na tyle wszechstronna, że każda branża może z niej czerpać korzyści.</p>
+                        <p>Co więcej, podczas warsztatów skupiamy się na Twoich konkretnych wyzwaniach i projektach, dzięki czemu możesz dostosować narzędzia i techniki AI bezpośrednio do swojej specyficznej sytuacji zawodowej.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 4 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Co wyróżnia AI Navigator od innych kursów AI dostępnych online?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Kluczowa różnica to <strong>interaktywny format warsztatów na żywo</strong> zamiast nagranych lekcji. Badania pokazują, że 76% osób uczących się z nagranych kursów nigdy nie wdraża zdobytej wiedzy w praktyce. Dzieje się tak, ponieważ bez interakcji, praktyki i możliwości zadawania pytań, nawet najlepsza teoria pozostaje tylko teorią.</p>
+                        <p>Dodatkowo, AI Navigator wyróżnia:</p>
+                        <ul style="margin-bottom: 0;">
+                            <li><strong>Praktyka zamiast teorii</strong> - pracujemy na Twoich rzeczywistych projektach i wyzwaniach</li>
+                            <li><strong>Natychmiastowa pomoc</strong> - gdy napotkasz problem, rozwiązujemy go na miejscu</li>
+                            <li><strong>Społeczność</strong> - dołączasz do grupy profesjonalistów z podobnymi celami</li>
+                            <li><strong>Długoterminowe wsparcie</strong> - dostęp do społeczności i przyszłych edycji</li>
+                            <li><strong>18+ lat doświadczenia prowadzącego</strong> - zamiast wiedzy od kogoś, kto "odkrył" AI kilka miesięcy temu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 5 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Jakie są wymagania techniczne do udziału w programie?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Wymagania są minimalne:</p>
+                        <ul>
+                            <li>Komputer z dostępem do internetu</li>
+                            <li>Przeglądarka internetowa (Chrome, Firefox, Safari lub Edge w aktualnej wersji)</li>
+                            <li>Mikrofon (opcjonalnie, jeśli chcesz zadawać pytania głosowo podczas warsztatów)</li>
+                            <li>Kamera (opcjonalnie, ale zachęcamy do korzystania dla lepszej interakcji)</li>
+                        </ul>
+                        <p>Nie potrzebujesz żadnego specjalistycznego oprogramowania - wszystkie narzędzia AI, których będziemy używać, są dostępne przez przeglądarkę. Przed warsztatami otrzymasz prostą instrukcję konfiguracji potrzebnych kont (większość z nich ma darmowe plany wystarczające do nauki).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 6 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Co jeśli już wykupiłem inne kursy AI i nie były pomocne?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>To bardzo częsty problem! Wielu uczestników AI Navigator miało wcześniej podobne doświadczenia z kursami teoretycznymi, które nie przełożyły się na praktyczne umiejętności.</p>
+                        <p>Jak mówi Anna W., uczestniczka poprzedniej edycji: <em>"Przeszłam wcześniej dwa nagrywane kursy AI, które były stratą czasu. AI Navigator był inny – interaktywność warsztatów pozwoliła mi od razu wdrażać wiedzę."</em></p>
+                        <p>Dlatego pierwszy warsztat jest całkowicie bezpłatny - możesz doświadczyć różnicy bez ryzyka. Jeśli po nim zdecydujesz się na pełny program i nadal nie będziesz zadowolony po pierwszych dwóch warsztatach, zwrócimy Ci pełną kwotę. </p>
+                        <p>Co ważne, nie musisz "odrabiać lekcji z poprzednich kursów" - zaczynamy od podstaw, a format warsztatów pozwala na natychmiastowe wyjaśnienie wszelkich wątpliwości.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 7 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Jak wygląda polityka zwrotów? Co jeśli program nie spełni moich oczekiwań?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Oferuję 100% gwarancję satysfakcji:</p>
+                        <ul>
+                            <li>Pierwszy warsztat jest całkowicie bezpłatny, więc możesz doświadczyć wartości bez żadnego ryzyka</li>
+                            <li>Jeśli po pierwszym warsztacie zdecydujesz się na pełny program i nie będziesz zadowolony po pierwszych dwóch warsztatach, zwrócimy Ci pełną kwotę - bez pytań, bez problemów</li>
+                            <li>Wystarczy, że napiszesz maila z informacją o rezygnacji, a zwrot nastąpi w ciągu 7 dni roboczych</li>
+                        </ul>
+                        <p>Ta gwarancja jest możliwa, ponieważ wiem, że interaktywny format warsztatów i praktyczne podejście dają realne rezultaty. Zaufało mi już ponad 450 profesjonalistów, którzy przeszli transformację z AI.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 8 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Jak wygląda harmonogram warsztatów? Kiedy się odbywają?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Struktura programu wygląda następująco:</p>
+                        <ul>
+                            <li>Każdy warsztat trwa 3 godziny i odbywa się w trybie online</li>
+                            <li>Warsztaty odbywają się raz w tygodniu, zazwyczaj w środy lub czwartki w godzinach 18:00-21:00</li>
+                            <li>Pełny program to 4 warsztaty rozłożone na 4 tygodnie</li>
+                            <li>Najbliższe terminy pierwszego (bezpłatnego) warsztatu to:
+                                <ul>
+                                    <li>Środa, 14 grudnia, 18:00-21:00 (zostało 8 miejsc)</li>
+                                    <li>Wtorek, 20 grudnia, 18:00-21:00 (zostało 9 miejsc)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <p>Po zapisie otrzymasz dokładny harmonogram wszystkich warsztatów. Jeśli nie możesz uczestniczyć na żywo w którymś z nich, pamiętaj, że jako uczestnik pełnego programu otrzymasz dostęp do nagrań oraz możliwość udziału w przyszłych edycjach.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 9 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Czy narzędzia AI, które poznamy, wymagają dodatkowych opłat?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>W programie AI Navigator przedstawiam szeroki ekosystem narzędzi, począwszy od całkowicie darmowych, przez te z planami freemium, aż po rozwiązania płatne. Kluczowe jest to, że:</p>
+                        <ul>
+                            <li>Większość narzędzi ma darmowe plany lub okresy próbne, które są wystarczające do nauki i testowania</li>
+                            <li>Pokazuję, jak strategicznie dobierać narzędzia, aby uzyskać maksymalną wartość przy minimalnych kosztach</li>
+                            <li>Uczę, jak samodzielnie ocenić, które narzędzia warto opłacać w Twojej konkretnej sytuacji biznesowej</li>
+                            <li>Koncentruję się na narzędziach z polskim wsparciem i zgodnych z RODO</li>
+                        </ul>
+                        <p>Co ważne, wiele z najbardziej wartościowych zastosowań AI można zrealizować przy użyciu narzędzi darmowych lub z niewielkimi kosztami (10-20$ miesięcznie), osiągając oszczędności rzędu tysięcy złotych.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 10 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Czy program jest zgodny z RODO i bezpieczny dla danych biznesowych?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Tak, bezpieczeństwo danych jest kluczowym elementem programu. W ramach warsztatów:</p>
+                        <ul>
+                            <li>Omawiamy szczegółowe wytyczne dotyczące zgodności z RODO przy korzystaniu z narzędzi AI</li>
+                            <li>Uczymy, jak bezpiecznie konfigurować narzędzia AI, aby chronić dane wrażliwe</li>
+                            <li>Tworzymy protokoły i polityki bezpieczeństwa dostosowane do wymogów RODO</li>
+                            <li>Przedstawiamy alternatywne rozwiązania dla danych szczególnie chronionych</li>
+                            <li>Pokazujemy, jak edukować zespół w zakresie bezpiecznego korzystania z AI</li>
+                        </ul>
+                        <p>Cały trzeci warsztat zawiera rozbudowany moduł poświęcony bezpieczeństwu danych i zgodności z regulacjami, co jest szczególnie istotne w kontekście polskich i europejskich przepisów o ochronie danych.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 11 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Na czym polega bonus "Dożywotni dostęp do społeczności Lifehackerów"?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>To wyjątkowy i najbardziej wartościowy bonus, który oferuję wyłącznie uczestnikom pełnego programu AI Navigator.</p>
+                        <p>Społeczność Lifehackerów to ekskluzywna grupa profesjonalistów skupionych na rozwoju osobistym i zawodowym. Jako członek otrzymujesz:</p>
+                        <ul>
+                            <li>Udział we wszystkich webinarach i warsztatach organizowanych dla społeczności (ponad 20 rocznie)</li>
+                            <li>Dostęp do wszystkich Protipów i materiałów ekskluzywnych z różnych obszarów rozwoju</li>
+                            <li>Bezpośredni dostęp do mnie podczas codziennych sesji 12:34-daily-coaching</li>
+                            <li>Możliwość konsultowania swoich wyzwań z AI, technologią i innymi obszarami rozwoju</li>
+                            <li>Przynależność do elitarnej grupy osób, które nieustannie się rozwijają i wspierają</li>
+                        </ul>
+                        <p>Standardowy roczny dostęp do społeczności Lifehackerów kosztuje 2997 zł. Dostęp dożywotni nie jest publicznie dostępny w żadnej ofercie - to absolutnie unikalna możliwość, dostępna tylko dla uczestników pełnego programu AI Navigator.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 12 -->
+            <div class="faq-item" style="margin-bottom: 25px; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Czy treści będą aktualizowane wraz z rozwojem technologii AI?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Zdecydowanie tak! AI rozwija się w niezwykle szybkim tempie, dlatego:</p>
+                        <ul>
+                            <li>Każda edycja programu jest aktualizowana o najnowsze narzędzia i techniki</li>
+                            <li>Jako uczestnik pełnego programu masz dostęp do wszystkich przyszłych edycji</li>
+                            <li>W społeczności AI Navigators regularnie dzielimy się informacjami o nowych rozwiązaniach</li>
+                            <li>Oferuję specjalne webinary dla absolwentów, poświęcone nowym trendom</li>
+                        </ul>
+                        <p>W ciągu tylko ostatniego roku przeprowadziłem 5 edycji warsztatów z AI, każda z nową zawartością dostosowaną do bieżących zmian. Dlatego możliwość dołączenia do przyszłych edycji jest tak wartościowa - Twoja wiedza nigdy się nie zestarzeje.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- FAQ Item 13 -->
+            <div class="faq-item" style="margin-bottom: 0; background-color: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); overflow: hidden;">
+                <div class="faq-question" style="padding: 20px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;" onclick="toggleFAQ(this)">
+                    <h4 style="margin: 0; font-size: 1.2rem; color: var(--neural-violet);">Jakie metody płatności są dostępne?</h4>
+                    <i class="fas fa-chevron-down" style="color: var(--ascension-pink); transition: transform 0.3s ease;"></i>
+                </div>
+                <div class="faq-answer" style="padding: 0 20px; max-height: 0; overflow: hidden; transition: all 0.3s ease;">
+                    <div style="padding-bottom: 20px;">
+                        <p>Oferuję różne metody płatności:</p>
+                        <ul>
+                            <li>Płatność kartą (Visa, Mastercard)</li>
+                            <li>BLIK</li>
+                            <li>Szybki przelew online</li>
+                            <li>Tradycyjny przelew bankowy</li>
+                            <li>PayPal</li>
+                        </ul>
+                        <p>Istnieje również możliwość płatności fakturą VAT - wystarczy zaznaczyć odpowiednią opcję podczas procesu zakupu i podać dane do faktury. Faktura zostanie wystawiona i przesłana na Twój adres email w ciągu 24 godzin od płatności.</p>
+                        <p>Na potrzeby firm oferuję także możliwość rozłożenia płatności na 2-3 raty - jeśli jesteś zainteresowany tą opcją, napisz do mnie bezpośrednio po zarezerwowaniu miejsca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional CTA below FAQ -->
+        <div style="max-width: 800px; margin: 50px auto 0; text-align: center; background: linear-gradient(135deg, rgba(59, 15, 119, 0.05) 0%, rgba(176, 18, 140, 0.05) 100%); padding: 30px; border-radius: 15px;">
+            <h3 style="color: var(--neural-violet); margin-top: 0;">Masz inne pytanie?</h3>
+            <p>Jeśli nie znalazłeś odpowiedzi na swoje pytanie, napisz do mnie bezpośrednio na adres <strong>kontakt@lifehackerzy.pl</strong> lub skorzystaj z formularza kontaktowego na stronie. Odpowiem najszybciej jak to możliwe!</p>
+            <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: wrap;">
+                <a href="#opcja1" class="btn btn-primary">Zacznij od bezpłatnego warsztatu</a>
+                <a href="#opcja2" class="btn btn-secondary">Dołącz do pełnego programu</a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- Script for FAQ functionality -->
+<script>
+    function toggleFAQ(element) {
+        // Toggle active class on the question
+        element.classList.toggle('active');
+        
+        // Toggle the arrow direction
+        const arrow = element.querySelector('.fa-chevron-down');
+        if (element.classList.contains('active')) {
+            arrow.style.transform = 'rotate(180deg)';
+        } else {
+            arrow.style.transform = 'rotate(0)';
+        }
+        
+        // Toggle the answer visibility
+        const answer = element.nextElementSibling;
+        if (element.classList.contains('active')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+            answer.style.maxHeight = '0';
+        }
+    }
+    
+    // Optional: Open the first FAQ item by default
+    document.addEventListener('DOMContentLoaded', function() {
+        const firstFAQ = document.querySelector('.faq-question');
+        if (firstFAQ) {
+            toggleFAQ(firstFAQ);
+        }
+    });
+</script>
+    <!-- Final CTA Section -->
+    <!-- Improved Final CTA Section -->
+<section class="cta" style="background: linear-gradient(135deg, var(--neural-violet) 0%, var(--quantum-blue) 100%); color: white; padding: 80px 0; position: relative; overflow: hidden;">
+    <!-- Added geometric shapes for visual interest -->
+    <div style="position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(255, 255, 255, 0.03); top: -100px; right: -100px;"></div>
+    <div style="position: absolute; width: 200px; height: 200px; border-radius: 50%; background: rgba(255, 255, 255, 0.05); bottom: -50px; left: -50px;"></div>
+    <div style="position: absolute; width: 100px; height: 100px; transform: rotate(45deg); background: rgba(176, 18, 140, 0.1); top: 50%; right: 10%;"></div>
+    
+    <div class="container">
+        <div class="cta-content" style="position: relative; z-index: 2; max-width: 900px; margin: 0 auto;">
+            <!-- Enhanced headline with gradient -->
+            <h2 style="color: white; font-size: 2.5rem; text-align: center; margin-bottom: 30px;">
+                Nie pozwól, by rewolucja AI <span style="display: inline-block; padding: 0 10px; background: linear-gradient(135deg, var(--ascension-pink) 0%, var(--luminal-magenta) 100%); border-radius: 5px;">przeszła obok Ciebie</span>
+            </h2>
+            
+            <!-- Enhanced urgent message -->
+            <div style="background-color: rgba(255, 255, 255, 0.1); border-radius: 15px; padding: 25px; margin-bottom: 40px; backdrop-filter: blur(5px);">
+                <p style="color: white; font-size: 1.1rem; margin: 0;">
+                    Każdego tygodnia spotykam profesjonalistów, którzy <strong>tracą setki godzin na zadania, które AI mogłoby wykonać w minuty</strong>. Osoby, które nie adaptują się do tej technologii, szybko zostaną w tyle - to nie jest kwestia "czy", ale "kiedy".
+                </p>
+            </div>
+            
+            <!-- Added two-column benefits -->
+            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px;">
+                <div style="flex: 1; min-width: 250px; background-color: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px; backdrop-filter: blur(5px);">
+                    <h4 style="color: white; font-size: 1.2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 10px; margin-top: 0;">
+                        <i class="fas fa-rocket" style="margin-right: 10px;"></i> Co zyskasz w AI Navigator
+                    </h4>
+                    <ul style="padding-left: 5px; list-style: none; margin-bottom: 0;">
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-check" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Praktyczne umiejętności wdrażania AI zamiast tylko teorii</span>
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-check" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Gotowe szablony i systemy do natychmiastowego użycia</span>
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-check" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Wsparcie eksperta i społeczności podczas wdrażania</span>
+                        </li>
+                        <li style="margin-bottom: 0; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-check" style="color: var(--ascension-pink); margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Długoterminową strategię AI dla Twojego biznesu</span>
+                        </li>
+                    </ul>
+                </div>
+                <div style="flex: 1; min-width: 250px; background-color: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 12px; backdrop-filter: blur(5px);">
+                    <h4 style="color: white; font-size: 1.2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 10px; margin-top: 0;">
+                        <i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i> Co stracisz, jeśli nie dołączysz
+                    </h4>
+                    <ul style="padding-left: 5px; list-style: none; margin-bottom: 0;">
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-times" style="color: #ff6b6b; margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Dziesiątki godzin tygodniowo na zadaniach, które AI może zautomatyzować</span>
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-times" style="color: #ff6b6b; margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Przewagę konkurencyjną na rynku pracy i w biznesie</span>
+                        </li>
+                        <li style="margin-bottom: 10px; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-times" style="color: #ff6b6b; margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Możliwość skupienia się na strategicznych zadaniach zamiast rutyny</span>
+                        </li>
+                        <li style="margin-bottom: 0; display: flex; align-items: flex-start; color: rgba(255, 255, 255, 0.9);">
+                            <i class="fas fa-times" style="color: #ff6b6b; margin-right: 10px; margin-top: 5px;"></i>
+                            <span>Szansę na bycie liderem transformacji w swojej organizacji</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Enhanced limited time offer -->
+            <div style="background: linear-gradient(135deg, rgba(176, 18, 140, 0.2) 0%, rgba(59, 15, 119, 0.2) 100%); border-radius: 15px; padding: 25px; margin-bottom: 40px; text-align: center; position: relative;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: var(--ascension-pink); color: white; padding: 5px 20px; border-radius: 30px; font-weight: 700; font-size: 0.9rem; white-space: nowrap;">
+                    TYLKO DO [DATA]
+                </div>
+                <h4 style="color: white; margin-top: 10px;">Liczba miejsc jest ściśle ograniczona!</h4>
+                <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 15px;">Ze względu na interaktywny charakter warsztatów, każda edycja ma ściśle ograniczoną liczbę miejsc. To gwarantuje, że każdy uczestnik otrzyma osobistą uwagę i wsparcie.</p>
+                
+                <div style="background-color: rgba(255, 255, 255, 0.1); padding: 15px; border-radius: 10px; display: inline-block; margin-bottom: 10px;">
+                    <span style="font-size: 1.5rem; font-weight: 700; color: white;">Aktualnie dostępnych miejsc: <span style="color: var(--ascension-pink);">17</span></span>
+                </div>
+                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; font-style: italic; margin: 0;">Po wyczerpaniu tej puli kolejna edycja planowana jest dopiero za 3 miesiące</p>
+            </div>
+            
+            <!-- Enhanced dual CTA buttons -->
+            <div class="cta-buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 40px;">
+                <div style="flex: 1; min-width: 280px; max-width: 400px; background-color: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 15px; text-align: center; backdrop-filter: blur(5px);">
+                    <h4 style="color: white; margin-top: 0; font-size: 1.3rem;">Opcja 1: Sprawdź bez zobowiązań</h4>
+                    <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 20px; font-size: 0.9rem;">Dołącz do pierwszego warsztatu za darmo i zdecyduj, czy chcesz kontynuować</p>
+                    <a href="https://lifehackerzy.pl/ai-navigator-warsztat" class="btn" style="background-color: white !important; color: var(--neural-violet); width: 100%; font-weight: 700; padding: 15px 0;">DOŁĄCZ BEZPŁATNIE DO WARSZTATU</a>
+                </div>
+                
+                <div style="flex: 1; min-width: 280px; max-width: 400px; background-color: rgba(176, 18, 140, 0.1); padding: 25px; border-radius: 15px; text-align: center; backdrop-filter: blur(5px); border: 2px solid var(--ascension-pink); box-shadow: 0 0 20px rgba(176, 18, 140, 0.3); transform: translateY(-10px);">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: var(--ascension-pink); color: white; padding: 5px 20px; border-radius: 30px; font-weight: 700; font-size: 0.9rem; white-space: nowrap;">
+                        NAJLEPSZA WARTOŚĆ
+                    </div>
+                    <h4 style="color: white; margin-top: 10px; font-size: 1.3rem;">Opcja 2: Pełny Program</h4>
+                    <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 20px; font-size: 0.9rem;">Zagwarantuj sobie miejsce w całym programie i wszystkie bonusy</p>
+                    <div style="margin-bottom: 15px;">
+                        <div style="text-decoration: line-through; color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">Normalna cena: 1997 zł</div>
+                        <div style="font-size: 1.2rem; font-weight: 700; color: white;">Dziś tylko: 987 zł</div>
+                    </div>
+                    <a href="https://lifehackerzy.pl/ai-navigator-program" class="btn btn-secondary" style="width: 100%; font-weight: 700; padding: 15px 0;">DOŁĄCZ DO PEŁNEGO PROGRAMU</a>
+                </div>
+            </div>
+            
+            <!-- Enhanced trust indicators -->
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-weight: 600; color: white; margin-bottom: 15px; font-size: 1.1rem;">Zaufany przez profesjonalistów:</div>
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                    <div style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; display: flex; align-items: center;">
+                        <i class="fas fa-shield-alt" style="margin-right: 8px;"></i>
+                        <span>100% gwarancja satysfakcji</span>
+                    </div>
+                    <div style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; display: flex; align-items: center;">
+                        <i class="fas fa-user-check" style="margin-right: 8px;"></i>
+                        <span>450+ zadowolonych uczestników</span>
+                    </div>
+                    <div style="color: rgba(255, 255, 255, 0.8); font-size: 0.9rem; display: flex; align-items: center;">
+                        <i class="fas fa-star" style="margin-right: 8px;"></i>
+                        <span>Ocena 4.9/5 w ankietach</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Enhanced personal note -->
+            <div style="color: rgba(255, 255, 255, 0.8); margin-top: 50px; text-align: right; position: relative; padding-left: 40px;">
+                <p style="font-style: italic; position: relative; z-index: 2;">-- Ludwik</p>
+                <div style="margin-top: 30px; border-left: 3px solid var(--ascension-pink); padding-left: 20px; font-style: italic; position: relative; z-index: 2;">
+                    <p style="color: rgba(255, 255, 255, 0.8);">P.S. <span style="background-color: var(--ascension-pink); color: white; padding: 2px 5px; border-radius: 3px;">Nie podejmuję lekko decyzji o oferowaniu pierwszego warsztatu bezpłatnie.</span> Robię to, ponieważ wierzę, że możliwość praktycznego doświadczenia wartości AI Navigator jest najlepszym sposobem, by pokazać Ci jak transformacyjny może być ten program. Dołącz do bezpłatnego warsztatu, doświadcz różnicy, a potem zdecyduj, czy warto kontynuować pełną transformację.</p>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-top: 20px;">P.P.S. Jeśli jesteś już częścią społeczności Lifehackerzy, znajdziesz w AI Navigator te same wartości – <b>autentyczne podejście, praktyczne rozwiązania i solidne fundamenty.</b></p>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-top: 20px;margin-bottom: 150px;">P.P.P.S. Pamiętaj, że jako uczestnik pełnego programu otrzymasz DOŻYWOTNI dostęp do całej społeczności Lifehackerów, co stanowi wartość wielokrotnie przekraczającą cenę całego programu!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <!-- Sticky CTA -->
+<!-- Improved Sticky CTA -->
+<div class="sticky-cta" style="position: fixed; bottom: 0; left: 0; right: 0; background-color: rgba(255, 255, 255, 0.97); padding: 15px; box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1); z-index: 100; transform: translateY(100%); transition: transform 0.3s ease; backdrop-filter: blur(10px);">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <!-- Left side: Value proposition -->
+        <div style="flex: 0 0 300px; min-width: 250px;">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="width: 50px; height: 50px; background-color: rgba(59, 15, 119, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                    <i class="fas fa-calendar-check" style="color: var(--neural-violet); font-size: 1.5rem;"></i>
+                </div>
+                <div>
+                    <div style="font-weight: 700; color: var(--neural-violet);">Zajmij miejsce teraz!</div>
+                    <div style="font-size: 0.9rem; color: var(--gentle-lavender);">Tylko <span style="color: var(--ascension-pink); font-weight: 600;">17 miejsc</span> pozostało</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Center: Countdown timer -->
+        <div style="flex: 0 0 300px; text-align: center; min-width: 250px;">
+            <div style="display: inline-flex; background-color: rgba(176, 18, 140, 0.1); padding: 10px 15px; border-radius: 50px; gap: 8px;">
+                <div style="text-align: center; min-width: 40px;">
+                    <div style="font-weight: 700; color: var(--neural-violet);" id="sticky-days">2</div>
+                    <div style="font-size: 0.7rem; color: var(--gentle-lavender);">DNI</div>
+                </div>
+                <div style="font-weight: 700; color: var(--neural-violet); align-self: center;">:</div>
+                <div style="text-align: center; min-width: 40px;">
+                    <div style="font-weight: 700; color: var(--neural-violet);" id="sticky-hours">11</div>
+                    <div style="font-size: 0.7rem; color: var(--gentle-lavender);">GODZ</div>
+                </div>
+                <div style="font-weight: 700; color: var(--neural-violet); align-self: center;">:</div>
+                <div style="text-align: center; min-width: 40px;">
+                    <div style="font-weight: 700; color: var(--neural-violet);" id="sticky-minutes">45</div>
+                    <div style="font-size: 0.7rem; color: var(--gentle-lavender);">MIN</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right side: CTA buttons -->
+        <div style="flex: 1; min-width: 250px; display: flex; gap: 15px; justify-content: flex-end; flex-wrap: wrap;">
+            <a href="https://lifehackerzy.pl/ai-navigator-warsztat" class="btn btn-primary" style="padding: 12px 20px; white-space: nowrap; min-width: 180px; text-align: center;">Warsztat za darmo</a>
+            <a href="https://lifehackerzy.pl/ai-navigator-program" class="btn btn-secondary" style="padding: 12px 20px; white-space: nowrap; min-width: 180px; text-align: center;">Pełny program: 987 zł</a>
+            
+            <!-- Close button -->
+            <button style="background: none; border: none; cursor: pointer; position: absolute; top: 10px; right: 10px; color: var(--gentle-lavender);" onclick="hideStickyBar()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Script to handle the sticky CTA -->
+<script>
+    // Show the sticky bar after scrolling halfway down the page
+    window.addEventListener('scroll', () => {
+        const stickyCta = document.querySelector('.sticky-cta');
+        const scrollPosition = window.scrollY;
+        const pageHeight = document.body.scrollHeight;
+        const windowHeight = window.innerHeight;
+        
+        // Show after scrolling 50% of the page
+        if (scrollPosition > (pageHeight - windowHeight) * 0.3) {
+            stickyCta.style.transform = 'translateY(0)';
+        } else {
+            stickyCta.style.transform = 'translateY(100%)';
+        }
+    });
+    
+    // Function to hide the sticky bar when the close button is clicked
+    function hideStickyBar() {
+        const stickyCta = document.querySelector('.sticky-cta');
+        stickyCta.style.transform = 'translateY(100%)';
+        
+        // Store in local storage that the user closed the bar
+        localStorage.setItem('stickyBarClosed', 'true');
+        
+        // Prevent the bar from showing again for this session
+        window.removeEventListener('scroll', showStickyBar);
+    }
+    
+    // Set up countdown timer
+    function updateCountdown() {
+        // Set end date (replace with your actual end date)
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 2); // 2 days from now
+        endDate.setHours(11, 45, 0); // 11:45:00
+        
+        const now = new Date();
+        const diff = endDate - now;
+        
+        if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('sticky-days').textContent = days;
+            document.getElementById('sticky-hours').textContent = hours < 10 ? '0' + hours : hours;
+            document.getElementById('sticky-minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
+        }
+    }
+    
+    // Update countdown every minute
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+</script>
+</body>
+</html>

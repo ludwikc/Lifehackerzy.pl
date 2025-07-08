@@ -1,0 +1,1604 @@
+Below you will find color palette and copy for my transformational program "AI Navigator". Become top UX/UI designer and create a very clean, light landing page. 
+
+Website serves a puropse to have people sign up for the first workshop (offered as a free webinar) or for the entire program immediately. 
+
+Use my color palette, do not modify the copy (strictly: do not modify the texts!), but feel free to add design elements (like buttons, UI elements). 
+
+
+# COLOR PALETTE
+Dark Mode Palette
+Name Hex Represents Usage Suggestions Deep Space Black #0A0A0D Authority, depth, mystery, elegance Background, Typography Neural Violet #3B0F77 Intelligence, insight, cognitive depth Primary Brand Accent, Headings Quantum Blue #061A40 Trust, professionalism, structure, AI Navigation, Subtle UI elements Ascension Pink #B0128C Transformation, creativity, human potential CTA Buttons, Highlights, Active States Luminal Magenta #DA1EAE Luxury, premium exclusivity, awakening Animated Glow, Premium accents Silver Mist #E1E1E6 Clarity, premium sophistication Typography (Headings, Important Text) Subtle Slate #79788C Reliability, subtle elegance, readability Body Text, Secondary Information
+Light Mode Palette
+Name Hex Represents Usage Suggestions Luminous White #F9F9FB Clarity, openness, premium simplicity Background, Main UI Canvas Neural Violet #3B0F77 Intelligence, insight, authoritative accent Headings, Icons, Brand Accents Quantum Blue #0B245E Trust, structured professionalism Interactive Elements, Navigation Ascension Pink #B0128C Transformation, energized human potential CTA Buttons, Highlighting Elements Luminal Magenta #DA1EAE Luxury, distinctive, premium activation Premium markers, Animated Highlights Deep Charcoal #2B2B33 Grounded authority, sophistication Primary Typography, Core Messaging Gentle Lavender #A9A8BD Balanced harmony, authenticity, readability Secondary Text, Descriptive Content
+Strategic Balance
+This refined palette achieves several key objectives for your brand:
+1. Authenticity through balance – The combination of deep, authoritative colors with vibrant accents creates a genuine expression of both technological mastery and human transformation.
+2. Respected authority – The darker base tones (Deep Space Black, Neural Violet) project gravitas and wisdom, aligning with your Black Panther energy – natural authority without needing to prove it.
+3. Premium positioning – The precise interplay between dark foundational colors and vibrant accent colors creates a sense of exclusivity and high value, perfect for high-ticket coaching.
+4. AI-Human intersection – The technical blues and purples balance beautifully with the human-centered pinks and magentas, visually representing your unique market position.
+The palette is designed to be versatile across digital platforms while maintaining consistent brand recognition and premium feel. The light mode variant ensures your brand projects the same values and authority in contexts where dark mode isn't appropriate.
+
+# COPY
+
+AI Navigator: Transformacyjny Program Praktycznego Wykorzystania AI w Biznesie i Życiu
+"W świecie zalewu teorii o AI, tylko praktyczne warsztaty z ekspertem dają realne rezultaty"
+Nie kolejny kurs online. Prawdziwe warsztaty LIVE z 18-letnim ekspertem technologii.
+Sztuczna inteligencja zmienia zasady gry dosłownie każdego tygodnia. W mediach szum, na rynku wysyp kursów teoretycznych, a Ty zastanawiasz się:
+
+Jak realnie wykorzystać AI w codziennej pracy, zamiast tylko słuchać o jej możliwościach?
+Dlaczego mimo prób z różnymi narzędziami, rezultaty są rozczarowujące?
+Jak zadać pytanie, gdy coś jest niejasne - a nie szukać odpowiedzi samemu?
+
+Statystyki nie kłamią: ponad 70% osób uczących się AI z kursów nagranych nie wdraża zdobytej wiedzy. Dlaczego? Bo brakuje im praktyki, interakcji i możliwości zadania pytań na żywo.
+AI Navigator to nie kolejny nagrany kurs. To seria dynamicznych warsztatów LIVE, gdzie razem pracujemy nad wdrożeniem AI w Twoim życiu i biznesie.
+Dlaczego warsztaty LIVE robią różnicę? 18+ lat doświadczenia w akcji.
+Obserwowałem i aktywnie uczestniczyłem w ewolucji technologii od ery data platform, przez big data, business intelligence, aż po obecną rewolucję AI.
+LIVE oznacza:
+
+Możesz zadać pytanie od razu, gdy coś jest niejasne
+Otrzymujesz natychmiastową pomoc przy wdrożeniu
+Uczysz się w grupie podobnie zmotywowanych osób
+Pracujesz na rzeczywistych przykładach, nie teoretycznych scenariuszach
+
+18+ lat doświadczenia w danych i technologii + interaktywne warsztaty LIVE = prawdziwa transformacja
+Dwie drogi do Twojej transformacji z AI:
+OPCJA 1: Dołącz na bezpłatny warsztat inauguracyjny
+Dlaczego oferuję pierwszy warsztat za darmo? Ponieważ wierzę, że ludzie, którzy nie uczą się dziś AI, robią sobie krzywdę. Chcę obniżyć próg wejścia, dając maksimum wartości bez żadnych zobowiązań.
+Podczas bezpłatnego warsztatu "Praktyczny System Pracy z AI w Biznesie":
+
+Przeprowadzisz strategiczny audyt procesów, które możesz zautomatyzować (z gotowym szablonem)
+Skonfigurujesz swojego osobistego asystenta AI do zadań biznesowych
+Stworzysz pierwsze szablony gotowe do natychmiastowego wdrożenia
+Dowiesz się, jak wykorzystać AI do analizy danych bez znajomości programowania
+
+OPCJA 2: Dołącz od razu do pełnego programu transformacyjnego
+Zagwarantuj sobie miejsce w całym cyklu warsztatów i rozpocznij swoją transformację natychmiast.
+Pełny program obejmuje:
+
+4 intensywne warsztaty LIVE prowadzone przez eksperta z 18-letnim doświadczeniem
+Interaktywne sesje, gdzie możesz zadawać pytania i otrzymywać natychmiastową pomoc
+Praktyczną pracę na rzeczywistych przypadkach i Twoich własnych wyzwaniach
+Pełen zestaw narzędzi, szablonów i strategii do wykorzystania od zaraz
+
+Twoja transformacyjna podróż przez świat AI
+WARSZTAT 1: Praktyczny System Pracy z AI w Biznesie (bezpłatny)
+Czego doświadczysz:
+
+Jak w 10 minut przeprowadzić audyt procesów do automatyzacji (z gotowym szablonem)
+Jak skonfigurować swojego osobistego asystenta AI do zadań biznesowych
+Jak zamieniać żmudne zadania w automatyczne procesy
+Jak wykorzystać AI do analizy danych bez znajomości programowania
+
+Podczas tego warsztatu nie tylko zobaczysz możliwości AI, ale WSPÓLNIE stworzymy Twój pierwszy zestaw szablonów gotowych do natychmiastowego wdrożenia.
+WARSZTAT 2: Mistrzowska Komunikacja z AI i Generowanie Wartościowych Treści
+Czego doświadczysz:
+
+Jak formułować instrukcje, które dają dokładnie takie wyniki, jakich potrzebujesz (Framework NAVI)
+Jak generować wysokiej jakości treści biznesowe, które nie wyglądają jak stworzone przez AI
+Jak zbudować bibliotekę szablonów dopasowanych do Twoich potrzeb
+Jak analizować dokumenty firmowe i automatycznie wyciągać kluczowe informacje
+
+WARSZTAT 3: Kompletny Ekosystem Narzędzi AI dla Twojego Biznesu
+Czego doświadczysz:
+
+Jak strategicznie dobierać narzędzia AI do Twoich potrzeb biznesowych
+Jak zadbać o bezpieczeństwo danych i zgodność z RODO przy pracy z AI
+Jak tworzyć profesjonalne materiały graficzne bez umiejętności projektowania
+Jak zautomatyzować procesy marketingowe wykorzystując synergię między różnymi narzędziami AI
+
+WARSZTAT 4: Automatyzacja Procesów i Strategia AI dla Twojej Firmy
+Czego doświadczysz:
+
+Jak przekształcić pojedyncze narzędzia w zintegrowany system pracy
+Jak tworzyć inteligentne przepływy pracy, które łączą AI z istniejącymi procesami biznesowymi
+Jak stworzyć długoterminową strategię AI dla Twojej firmy
+Jak przygotować Twój zespół do efektywnego korzystania z nowych technologii
+
+EKSKLUZYWNE BONUSY DLA UCZESTNIKÓW PEŁNEGO PROGRAMU
+BONUS #1: NAGRANIA WSZYSTKICH SESJI LIVE
+Wartość: 1997 zł
+Otrzymasz pełen dostęp do nagrań wszystkich warsztatów Twojej grupy. Dzięki temu możesz powracać do materiałów w dowolnym momencie i utrwalać zdobytą wiedzę. To jak posiadanie osobistego eksperta AI na żądanie - zawsze gdy potrzebujesz wsparcia.
+BONUS #2: DOSTĘP DO ZAMKNIĘTEJ SPOŁECZNOŚCI AI NAVIGATORS
+Wartość: 2997 zł
+Dołączysz do ekskluzywnej sekcji w społeczności Lifehackerów, dostępnej tylko dla uczestników programu. To miejsce, gdzie będziesz budować wartościowe kontakty, nawiązywać współprace i rozwijać wspólne projekty z innymi profesjonalistami wykorzystującymi AI. Najlepsze innowacje powstają na styku współpracy!
+BONUS #3: DOŁĄCZANIE DO WSZYSTKICH PRZYSZŁYCH EDYCJI
+Wartość: 4997 zł
+AI rozwija się błyskawicznie - dlatego otrzymasz możliwość udziału we wszystkich przyszłych edycjach programu. Oznacza to stały dostęp do najnowszych technik, narzędzi i strategii AI bez dodatkowych opłat. Twoja wiedza będzie zawsze aktualna, niezależnie od tego jak szybko zmienia się technologia.
+BONUS #4: DOŻYWOTNI DOSTĘP DO SPOŁECZNOŚCI LIFEHACKERÓW (NAJWIĘKSZY BONUS!)
+Wartość: 9997 zł
+To nie pomyłka - otrzymasz DOŻYWOTNI dostęp do całej społeczności Lifehackerów! Oznacza to:
+
+Udział we wszystkich webinarach i warsztatach społeczności
+Dostęp do wszystkich Protipów i materiałów ekskluzywnych
+Bezpośredni dostęp do mnie podczas codziennych sesji 12:34-daily-coaching
+Możliwość konsultowania swoich wyzwań z AI i technologią
+Przynależność do elitarnej grupy osób, które nieustannie się rozwijają
+
+Łączna wartość wszystkich bonusów: 19,988 zł
+Realne historie transformacji
+
+"Po pierwszym warsztacie zautomatyzowałem odpowiedzi na powtarzalne zapytania klientów. Możliwość zadawania pytań na żywo była kluczowa - miałem specyficzny przypadek, którego żaden kurs online by nie przewidział. Ludwik pomógł mi stworzyć rozwiązanie na miejscu. Zyskuję teraz około 8 godzin tygodniowo, które mogę poświęcić na rozwój biznesu."
+— Marek, właściciel agencji marketingowej
+
+
+"Przeszłam wcześniej dwa nagrywane kursy AI, które były stratą czasu. AI Navigator był inny – interaktywność warsztatów pozwoliła mi od razu wdrażać wiedzę. Skróciłam czas przygotowania raportów o 70%, a możliwość zadawania pytań na żywo była bezcenna. Różnica między uczeniem się z nagranego kursu a warsztatami live jest kolosalna."
+— Anna, analityk finansowy
+
+
+"Format warsztatów LIVE sprawił, że wreszcie zacząłem UŻYWAĆ AI, a nie tylko o niej słuchać. Możliwość natychmiastowej konsultacji, gdy napotkałem problem, była przełomowa. Teraz tworzę materiały marketingowe w kilka minut, a pytania zadane podczas warsztatów zaoszczędziły mi miesięcy samodzielnego zgadywania. Oszczędności? Ponad 15,000 zł miesięcznie na outsourcingu i 20 godzin tygodniowo mojego czasu."
+— Piotr, dyrektor operacyjny
+
+Dwie możliwości dołączenia - wybierz swoją ścieżkę:
+OPCJA 1: ZAPISZ SIĘ NA BEZPŁATNY WARSZTAT
+
+Doświadcz transformacyjnej mocy AI Navigator bez żadnych zobowiązań
+Stwórz pierwsze narzędzia AI gotowe do natychmiastowego wdrożenia
+Po warsztacie zdecyduj, czy chcesz kontynuować pełen program
+
+[ZAPISZ SIĘ NA BEZPŁATNY WARSZTAT]
+OPCJA 2: DOŁĄCZ DO PEŁNEGO PROGRAMU TRANSFORMACYJNEGO
+
+Zagwarantuj sobie miejsce w całym cyklu warsztatów LIVE
+Otrzymaj natychmiastowy dostęp do wszystkich czterech ekskluzywnych bonusów
+Rozpocznij swoją transformację z AI już dziś
+
+[DOŁĄCZ DO PEŁNEGO PROGRAMU]
+Kto prowadzi AI Navigator?
+AI Navigator prowadzi Ludwik Siadlak – ekspert z 18-letnim doświadczeniem w dziedzinie technologii danych, od platform data warehouse, przez big data, business intelligence, aż po sztuczną inteligencję.
+Moje doświadczenie to nie tylko technologia, ale także wieloletnia praktyka w nauczaniu i wdrażaniu systemów w różnych organizacjach. Obserwuję rozwój AI od jej początków, co daje mi unikalną perspektywę na obecne możliwości i przyszłe trendy.
+W przeciwieństwie do "ekspertów od wczoraj", którzy oferują nagrywane kursy pełne teorii, prowadzę interaktywne warsztaty, gdzie możesz zadawać pytania, otrzymywać natychmiastową pomoc i budować rzeczywiste rozwiązania - nie tylko słuchać o nich.
+Zostań częścią rewolucji AI - nie zostawaj w tyle
+Każdego tygodnia spotykam profesjonalistów, którzy tracą setki godzin na zadania, które AI mogłoby wykonać w minuty. Osoby, które nie adaptują się do tej technologii, szybko zostaną w tyle - to nie jest kwestia "czy", ale "kiedy".
+AI Navigator to nie tylko seria warsztatów – to społeczność profesjonalistów, którzy rozumieją, że skuteczne wykorzystanie AI wymaga praktyki, interakcji i wsparcia ekspertów.
+Jako Twój przewodnik w tej podróży, zapraszam Cię do współtworzenia przyszłości, w której technologia wspiera Cię w codziennej pracy, zamiast być kolejnym skomplikowanym narzędziem do opanowania.
+Ilość miejsc jest limitowana!
+Ze względu na interaktywny charakter warsztatów, każda edycja ma ściśle ograniczoną liczbę miejsc. To gwarantuje, że każdy uczestnik otrzyma osobistą uwagę i wsparcie.
+Aktualnie dostępnych miejsc: 17
+[ZAPISZ SIĘ NA BEZPŁATNY WARSZTAT]
+[DOŁĄCZ DO PEŁNEGO PROGRAMU]
+-- Ludwik
+P.S. Nie podejmuję lekko decyzji o oferowaniu pierwszego warsztatu bezpłatnie. Robię to, ponieważ wierzę, że możliwość praktycznego doświadczenia wartości AI Navigator jest najlepszym sposobem, by pokazać Ci jak transformacyjny może być ten program. Dołącz do bezpłatnego warsztatu, doświadcz różnicy, a potem zdecyduj, czy warto kontynuować pełną transformację.
+P.P.S. Jeśli jesteś już częścią społeczności Lifehackerzy, znajdziesz w AI Navigator te same wartości – autentyczne podejście, praktyczne rozwiązania i solidne fundamenty. Pamiętaj, że jako uczestnik pełnego programu otrzymasz DOŻYWOTNI dostęp do całej społeczności Lifehackerów, co stanowi wartość wielokrotnie przekraczającą cenę całego programu!
+
+--- 
+
+here you have my own first draft, think if there aren't some design elements that could improve what you have created. provide me with the well thought-through, refactored, production-ready website: 
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Navigator | Transformacyjny Program Praktycznego Wykorzystania AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --luminous-white: #F9F9FB;
+            --neural-violet: #3B0F77;
+            --quantum-blue: #0B245E;
+            --ascension-pink: #B0128C;
+            --luminal-magenta: #DA1EAE;
+            --deep-charcoal: #2B2B33;
+            --gentle-lavender: #A9A8BD;
+            --off-white: #F4F4F8;
+            --light-gray: #E8E8EF;
+            --card-shadow: 0 10px 30px rgba(11, 36, 94, 0.07);
+            --card-hover-shadow: 0 15px 40px rgba(11, 36, 94, 0.12);
+            --heading-font: 'Lora', serif;
+            --body-font: 'Inter', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--body-font);
+            background-color: var(--luminous-white);
+            color: var(--deep-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--heading-font);
+            color: var(--neural-violet);
+            margin-bottom: 0.5em;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        p, li {
+            margin-bottom: 1rem;
+            color: var(--deep-charcoal);
+            font-size: 1.125rem;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--gentle-lavender);
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: var(--neural-violet);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary {
+            background-color: var(--ascension-pink);
+            color: white;
+            box-shadow: 0 4px 12px rgba(176, 18, 140, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background-color: #9e1079;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(176, 18, 140, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--neural-violet);
+            border: 2px solid var(--neural-violet);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--neural-violet);
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, var(--luminous-white) 0%, #EFF0F9 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background-image: url('https://lifehackerzy.pl/assets/images/background/tools-bg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            opacity: 0.05;
+        }
+        
+        .hero-content {
+            max-width: 750px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(59, 15, 119, 0.1);
+            color: var(--neural-violet);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        
+        .hero-badge i {
+            margin-right: 8px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-image {
+            position: absolute;
+            right: -300px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 700px;
+            height: auto;
+            opacity: 0.7;
+        }
+        
+        /* Feature Cards */
+        .features {
+            padding: 100px 0;
+            background-color: var(--off-white);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 16px;
+            font-size: 2.5rem;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--ascension-pink);
+        }
+        
+        .section-subtitle {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--gentle-lavender);
+            font-size: 1.25rem;
+        }
+        
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--card-hover-shadow);
+        }
+        
+        .card-icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .card-icon i {
+            font-size: 2.5rem;
+            color: var(--neural-violet);
+            margin-right: 15px;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--neural-violet);
+            font-weight: 700;
+        }
+        
+        .card-content {
+            flex-grow: 1;
+            margin-bottom: 24px;
+        }
+        
+        .card-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .card-content li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+        
+        .card-content li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--ascension-pink);
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+        
+        .card-link {
+            font-weight: 600;
+            color: var(--neural-violet);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        
+        .card-link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .card-link:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--luminous-white) 0%, #F2F0FF 100%);
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            font-family: var(--heading-font);
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 6rem;
+            color: rgba(59, 15, 119, 0.1);
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+            margin-bottom: 24px;
+            font-size: 1.125rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--light-gray);
+            margin-right: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .testimonial-author-image i {
+            font-size: 1.5rem;
+            color: var(--gentle-lavender);
+        }
+        
+        .testimonial-author-info h5 {
+            font-size: 1.125rem;
+            margin-bottom: 4px;
+            color: var(--deep-charcoal);
+        }
+        
+        .testimonial-author-info p {
+            font-size: 0.9rem;
+            color: var(--gentle-lavender);
+            margin: 0;
+        }
+        
+        /* Program Section */
+        .program {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .timeline-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 16px;
+            width: 4px;
+            height: 100%;
+            background-color: var(--light-gray);
+            border-radius: 2px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-point {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 36px;
+            height: 36px;
+            background-color: white;
+            border: 4px solid var(--neural-violet);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        .timeline-point i {
+            color: var(--neural-violet);
+            font-size: 1rem;
+        }
+        
+        .timeline-content {
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .timeline-content h4 {
+            margin-bottom: 16px;
+        }
+        
+        .timeline-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .timeline-content li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+        }
+        
+        .timeline-content li::before {
+            content: "\f054";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--ascension-pink);
+            position: absolute;
+            left: 0;
+            top: 4px;
+            font-size: 0.8rem;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #F9F9FB 0%, #F0F0FF 100%);
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-subtitle {
+            font-size: 1.25rem;
+            color: var(--gentle-lavender);
+            margin-bottom: 16px;
+        }
+        
+        .cta-buttons {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .cta-note {
+            margin-top: 32px;
+            font-style: italic;
+            color: var(--gentle-lavender);
+        }
+        
+        /* About Instructor */
+        .about-instructor {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .instructor-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 60px;
+        }
+        
+        .instructor-image {
+            flex: 0 0 300px;
+        }
+        
+        .instructor-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+        }
+        
+        .instructor-content {
+            flex: 1;
+        }
+        
+        .instructor-name {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        
+        .instructor-title {
+            font-size: 1.25rem;
+            color: var(--gentle-lavender);
+            margin-bottom: 24px;
+        }
+        
+        .instructor-desc {
+            margin-bottom: 24px;
+        }
+        
+        /* Bonus Section */
+        .bonuses {
+            padding: 100px 0;
+            background-color: var(--off-white);
+        }
+        
+        .bonus-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--ascension-pink);
+        }
+        
+        .bonus-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .bonus-number {
+            font-family: var(--heading-font);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--neural-violet);
+            margin-right: 15px;
+        }
+        
+        .bonus-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .bonus-value {
+            display: inline-block;
+            background-color: rgba(176, 18, 140, 0.1);
+            color: var(--ascension-pink);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .bonus-description {
+            font-size: 1.125rem;
+        }
+        
+        .bonus-total {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 40px 0;
+        }
+        
+        /* Options Section */
+        .options {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .option-card {
+            background-color: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-top: 6px solid var(--neural-violet);
+        }
+        
+        .option-badge {
+            display: inline-block;
+            background-color: rgba(59, 15, 119, 0.1);
+            color: var(--neural-violet);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .option-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .option-description {
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        
+        .option-button {
+            margin-top: auto;
+        }
+        
+        /* Stats Counter */
+        .stats-counter {
+            background-color: rgba(59, 15, 119, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .stats-text {
+            font-size: 1.125rem;
+            margin-bottom: 10px;
+        }
+        
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--neural-violet);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            background-color: var(--neural-violet);
+            color: white;
+            text-align: center;
+        }
+        
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0;
+        }
+        
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Feature Box */
+        .feature-box {
+            background-color: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        
+        .feature-icon {
+            flex: 0 0 50px;
+            height: 50px;
+            background-color: rgba(59, 15, 119, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .feature-icon i {
+            font-size: 1.5rem;
+            color: var(--neural-violet);
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .feature-text h4 {
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+        
+        .feature-text p {
+            margin-bottom: 0;
+        }
+        
+        /* For Who */
+        .for-who {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        /* Sticky CTA */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .sticky-cta.visible {
+            transform: translateY(0);
+        }
+        
+        .sticky-cta .btn {
+            margin: 0;
+            padding: 12px 24px;
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .trust-badge-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(59, 15, 119, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .trust-badge-icon i {
+            font-size: 2rem;
+            color: var(--neural-violet);
+        }
+        
+        .trust-badge-text {
+            font-weight: 600;
+            color: var(--deep-charcoal);
+        }
+        
+        .trust-badge-subtext {
+            font-size: 0.9rem;
+            color: var(--gentle-lavender);
+            margin-top: 4px;
+        }
+        
+        /* Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+        
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+        
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+        
+        .delay-400 {
+            animation-delay: 0.4s;
+        }
+        
+        .floating-shape {
+            position: absolute;
+            opacity: 0.15;
+            z-index: 0;
+        }
+        
+        .shape-1 {
+            top: 10%;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--neural-violet);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .shape-2 {
+            bottom: 20%;
+            right: 10%;
+            width: 120px;
+            height: 120px;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            background: var(--ascension-pink);
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        .shape-3 {
+            top: 60%;
+            left: 15%;
+            width: 60px;
+            height: 60px;
+            background: var(--quantum-blue);
+            transform: rotate(45deg);
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero-image {
+                right: -200px;
+                width: 600px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+            
+            h2 {
+                font-size: 2.25rem;
+            }
+            
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero-image {
+                display: none;
+            }
+            
+            .instructor-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .instructor-image {
+                flex: 0 0 auto;
+                max-width: 250px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            
+            h2 {
+                font-size: 1.875rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 80px 0 50px;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+            }
+            
+            .features, .testimonials, .program, .about-instructor, .bonuses, .options, .cta {
+                padding: 60px 0;
+            }
+            
+            .feature-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            
+            .timeline-container::before {
+                left: 15px;
+            }
+            
+            .timeline-point {
+                width: 30px;
+                height: 30px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width:.576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .btn {
+                padding: 14px 24px;
+                font-size: 1rem;
+            }
+            
+            .timeline-item {
+                padding-left: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Hero Section -->
+    <section class="hero">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fadeInUp">
+                    <i class="fas fa-crown"></i> Nie kolejny kurs online. Prawdziwe warsztaty NA ŻYWO (online). 
+                </div>
+                <h1 class="animate-fadeInUp delay-100">AI Navigator: Transformacyjny Program Praktycznego Wykorzystania AI w Biznesie i Życiu</h1>
+                <p class="subtitle animate-fadeInUp delay-200">"W świecie zalewu teorii o AI, tylko praktyczne warsztaty z ekspertem dają realne rezultaty"</p>
+                <p class="animate-fadeInUp delay-300">Sztuczna inteligencja zmienia zasady gry dosłownie każdego tygodnia. W mediach szum, na rynku wysyp kursów teoretycznych, a Ty zastanawiasz się:</p>
+                <ul class="animate-fadeInUp delay-300">
+                    <li>Jak realnie wykorzystać AI w codziennej pracy, zamiast tylko słuchać o jej możliwościach?</li>
+                    <li>Dlaczego mimo prób z różnymi narzędziami, rezultaty są rozczarowujące?</li>
+                    <li>Jak zadać pytanie, gdy coś jest niejasne - a nie szukać odpowiedzi samemu?</li>
+                </ul>
+                <p class="animate-fadeInUp delay-300">Statystyki nie kłamią: ponad 70% osób uczących się AI z kursów nagranych nie wdraża zdobytej wiedzy. Dlaczego? Bo brakuje im praktyki, interakcji i możliwości zadania pytań na żywo.</p>
+                <p class="animate-fadeInUp delay-300"><strong>AI Navigator to nie kolejny nagrany kurs. To seria dynamicznych warsztatów LIVE</strong>, gdzie razem pracujemy nad wdrożeniem AI w Twoim życiu i biznesie.</p>
+                <div class="hero-buttons animate-fadeInUp delay-400">
+                    <a href="#opcja1" class="btn btn-primary">Dołącz do pierwszego warsztatu (bezpłatnie)</a>
+                    <a href="#opcja2" class="btn btn-secondary">Dołącz do pełnego Programu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Why LIVE makes difference -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dlaczego warsztaty LIVE robią różnicę?</h2>
+                <p class="section-subtitle">18+ lat doświadczenia w akcji.</p>
+            </div>
+            
+            <p>Obserwowałem i <strong>aktywnie uczestniczyłem</strong> w ewolucji technologii od ery data platform, przez big data, business intelligence, aż po obecną rewolucję AI.</p>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-question-circle"></i>
+                </div>
+                <div class="feature-text">
+                    <h4>Możesz zadać pytanie od razu, gdy coś jest niejasne</h4>
+                </div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-hands-helping"></i>
+                </div>
+                <div class="feature-text">
+                    <h4>Otrzymujesz natychmiastową pomoc przy wdrożeniu</h4>
+                </div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="feature-text">
+                    <h4>Uczysz się w grupie podobnie zmotywowanych osób</h4>
+                </div>
+            </div>
+            
+            <div class="feature-box">
+                <div class="feature-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <div class="feature-text">
+                    <h4>Pracujesz na rzeczywistych przykładach, nie teoretycznych scenariuszach</h4>
+                </div>
+            </div>
+            
+            <p class="text-center" style="font-weight: 700; margin-top: 40px; font-size: 1.25rem;">18+ lat doświadczenia w danych i technologii + interaktywne warsztaty LIVE = prawdziwa transformacja</p>
+        </div>
+    </section>
+    
+
+<!-- Options -->     
+<section class="options">         
+    <div class="container">             
+        <div class="section-header">                 
+            <h2 class="section-title">Dwie drogi do Twojej transformacji z AI</h2>             
+        </div>                          
+        <div class="cards-grid">                 
+            <div id="opcja1" class="card">                     
+                <div class="option-badge">OPCJA 1</div>                     
+                <h3 class="card-title">Dołącz do pierwszego warsztatu (zupełnie bezpłatnie)</h3>                     
+                <div class="card-content">                         
+                    <p>Dlaczego oferuję pierwszy warsztat za darmo? Ponieważ wierzę, że ludzie, którzy nie uczą się dziś AI, robią sobie krzywdę. Chcę obniżyć próg wejścia, dając maksimum wartości bez żadnych zobowiązań.</p>                         
+                    <p>Podczas bezpłatnego warsztatu "Praktyczny System Pracy z AI w Biznesie":</p>                         
+                    <ul>                             
+                        <li>Przeprowadzisz strategiczny audyt procesów, które możesz zautomatyzować (z gotowym szablonem)</li>                             
+                        <li>Skonfigurujesz swojego osobistego asystenta AI do zadań biznesowych</li>                             
+                        <li>Stworzysz pierwsze szablony gotowe do natychmiastowego wdrożenia</li>                             
+                        <li>Dowiesz się, jak wykorzystać AI do analizy danych bez znajomości programowania</li>                         
+                    </ul>
+                    <p class="note">* Po warsztacie zdecydujesz, czy chcesz kontynuować pełną transformację</p>
+                </div>                     
+                <a href="#zapisz-sie" class="btn btn-primary option-button">Dołącz do najbliższej edycji (bezpłatnie)</a>                 
+            </div>                                  
+            <div id="opcja2" class="card recommended">                     
+                <div class="option-badge">OPCJA 2</div>                     
+                <div class="recommendation-badge">NAJBARDZIEJ WARTOŚCIOWA</div>
+                <h3 class="card-title">Dołącz od razu do pełnego programu transformacyjnego</h3>                     
+                <div class="card-content">                         
+                    <p>Zagwarantuj sobie miejsce w całym cyklu warsztatów i rozpocznij swoją transformację natychmiast.</p>                         
+                    <p><strong>Pełny program obejmuje:</strong></p>                         
+                    <ul>                             
+                        <li><strong>4 intensywne warsztaty LIVE</strong> prowadzone przez eksperta z 18-letnim doświadczeniem</li>                             
+                        <li><strong>Natychmiastowy dostęp</strong> do społeczności AI Navigators (bez czekania na kolejną edycję)</li>                             
+                        <li><strong>Priorytetowe wsparcie</strong> podczas sesji Q&A - Twoje pytania będą zawsze na pierwszym miejscu</li>                             
+                        <li><strong>Bibliotekę 50+ gotowych promptów biznesowych</strong> dostosowanych do polskich realiów</li>                             
+                        <li><strong>10 case studies z polskich firm</strong> pokazujących realne wdrożenia AI</li>                             
+                        <li><strong>Katalog 100 sprawdzonych narzędzi AI</strong> z instrukcjami wdrożenia</li>                            
+                        <li><strong>Szablony audytu procesów</strong> do błyskawicznej identyfikacji obszarów automatyzacji</li>                             
+                        <li><strong>Gotowe plany wdrożenia AI</strong> dla różnych typów firm i branż</li>   
+                        <li><strong>Rezerwację miejsca</strong> na wszystkie nadchodzące edycje warsztatów</li>
+                        <li><strong>Wszystkie 4 ekskluzywne bonusy</strong> o łącznej wartości 19,988 PLN</li>              
+                    </ul>
+                    <div class="bonus-preview">
+                        <p><strong>Ekskluzywne bonusy tylko dla uczestników pełnego programu:</strong></p>
+                        <ul>
+                            <li>BONUS #1: Nagrania wszystkich sesji LIVE (1997 zł)</li>
+                            <li>BONUS #2: Dostęp do zamkniętej społeczności AI Navigators (2997 zł)</li>
+                            <li>BONUS #3: Dołączanie do wszystkich przyszłych edycji (4997 zł)</li>
+                            <li>BONUS #4: DOŻYWOTNI dostęp do społeczności Lifehackerów (9997 zł)</li>
+                        </ul>
+                    </div>
+                </div>                     
+                <a href="#pelny-program" class="btn btn-primary option-button">Dołącz do pełnego programu TERAZ!</a>                 
+            </div>             
+        </div>         
+    </div>     
+</section>
+    
+    <!-- Program Section -->
+    <section id="program" class="program">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Twoja transformacyjna podróż przez świat AI</h2>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-point">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>WARSZTAT 1: Praktyczny System Pracy z AI w Biznesie (bezpłatny)</h4>
+                        <p>Czego doświadczysz:</p>
+                        <ul>
+                            <li>Jak w 10 minut przeprowadzić audyt procesów do automatyzacji (z gotowym szablonem)</li>
+                            <li>Jak skonfigurować swojego osobistego asystenta AI do zadań biznesowych</li>
+                            <li>Jak zamieniać żmudne zadania w automatyczne procesy</li>
+                            <li>Jak wykorzystać AI do analizy danych bez znajomości programowania</li>
+                        </ul>
+                        <p>Podczas tego warsztatu nie tylko zobaczysz możliwości AI, ale WSPÓLNIE stworzymy Twój pierwszy zestaw szablonów gotowych do natychmiastowego wdrożenia.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-point">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>WARSZTAT 2: Mistrzowska Komunikacja z AI i Generowanie Wartościowych Treści</h4>
+                        <p>Czego doświadczysz:</p>
+                        <ul>
+                            <li>Jak formułować instrukcje, które dają dokładnie takie wyniki, jakich potrzebujesz (Framework NAVI)</li>
+                            <li>Jak generować wysokiej jakości treści biznesowe, które nie wyglądają jak stworzone przez AI</li>
+                            <li>Jak zbudować bibliotekę szablonów dopasowanych do Twoich potrzeb</li>
+                            <li>Jak analizować dokumenty firmowe i automatycznie wyciągać kluczowe informacje</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-point">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>WARSZTAT 3: Kompletny Ekosystem Narzędzi AI dla Twojego Biznesu</h4>
+                        <p>Czego doświadczysz:</p>
+                        <ul>
+                            <li>Jak strategicznie dobierać narzędzia AI do Twoich potrzeb biznesowych</li>
+                            <li>Jak zadbać o bezpieczeństwo danych i zgodność z RODO przy pracy z AI</li>
+                            <li>Jak tworzyć profesjonalne materiały graficzne bez umiejętności projektowania</li>
+                            <li>Jak zautomatyzować procesy marketingowe wykorzystując synergię między różnymi narzędziami AI</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-point">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h4>WARSZTAT 4: Automatyzacja Procesów i Strategia AI dla Twojej Firmy</h4>
+                        <p>Czego doświadczysz:</p>
+                        <ul>
+                            <li>Jak przekształcić pojedyncze narzędzia w zintegrowany system pracy</li>
+                            <li>Jak tworzyć inteligentne przepływy pracy, które łączą AI z istniejącymi procesami biznesowymi</li>
+                            <li>Jak stworzyć długoterminową strategię AI dla Twojej firmy</li>
+                            <li>Jak przygotować Twój zespół do efektywnego korzystania z nowych technologii</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Bonuses Section -->
+    <section id="bonusy" class="bonuses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">EKSKLUZYWNE BONUSY DLA UCZESTNIKÓW PEŁNEGO PROGRAMU</h2>
+            </div>
+            
+            <div class="bonus-card">
+                <div class="bonus-header">
+                    <div class="bonus-number">BONUS #1:</div>
+                    <h3 class="bonus-title">NAGRANIA WSZYSTKICH SESJI LIVE</h3>
+                </div>
+                <div class="bonus-value">Wartość: 1997 zł</div>
+                <p class="bonus-description">Otrzymasz pełen dostęp do nagrań wszystkich warsztatów Twojej grupy. Dzięki temu możesz powracać do materiałów w dowolnym momencie i utrwalać zdobytą wiedzę. To jak posiadanie osobistego eksperta AI na żądanie - zawsze gdy potrzebujesz wsparcia.</p>
+            </div>
+            
+            <div class="bonus-card">
+                <div class="bonus-header">
+                    <div class="bonus-number">BONUS #2:</div>
+                    <h3 class="bonus-title">DOSTĘP DO ZAMKNIĘTEJ SPOŁECZNOŚCI AI NAVIGATORS</h3>
+                </div>
+                <div class="bonus-value">Wartość: 2997 zł</div>
+                <p class="bonus-description">Dołączysz do ekskluzywnej sekcji w społeczności Lifehackerów, dostępnej tylko dla uczestników programu. To miejsce, gdzie będziesz budować wartościowe kontakty, nawiązywać współprace i rozwijać wspólne projekty z innymi profesjonalistami wykorzystującymi AI. Najlepsze innowacje powstają na styku współpracy!</p>
+            </div>
+            
+            <div class="bonus-card">
+                <div class="bonus-header">
+                    <div class="bonus-number">BONUS #3:</div>
+                    <h3 class="bonus-title">DOŁĄCZANIE DO WSZYSTKICH PRZYSZŁYCH EDYCJI</h3>
+                </div>
+                <div class="bonus-value">Wartość: 4997 zł</div>
+                <p class="bonus-description">AI rozwija się błyskawicznie - dlatego otrzymasz możliwość udziału we wszystkich przyszłych edycjach programu. Oznacza to stały dostęp do najnowszych technik, narzędzi i strategii AI bez dodatkowych opłat. Twoja wiedza będzie zawsze aktualna, niezależnie od tego jak szybko zmienia się technologia.</p>
+            </div>
+            
+            <div class="bonus-card">
+                <div class="bonus-header">
+                    <div class="bonus-number">BONUS #4:</div>
+                    <h3 class="bonus-title">DOŻYWOTNI DOSTĘP DO SPOŁECZNOŚCI LIFEHACKERÓW (NAJWIĘKSZY BONUS!)</h3>
+                </div>
+                <div class="bonus-value">Wartość: 9997 zł</div>
+                <p class="bonus-description">To nie pomyłka - otrzymasz DOŻYWOTNI dostęp do całej społeczności Lifehackerów! Oznacza to:</p>
+                <ul style="margin-top: 15px; list-style-type: disc; padding-left: 20px;">
+                    <li>Udział we wszystkich webinarach i warsztatach społeczności</li>
+                    <li>Dostęp do wszystkich Protipów i materiałów ekskluzywnych</li>
+                    <li>Bezpośredni dostęp do mnie podczas codziennych sesji 12:34-daily-coaching</li>
+                    <li>Możliwość konsultowania swoich wyzwań z AI i technologią</li>
+                    <li>Przynależność do elitarnej grupy osób, które nieustannie się rozwijają</li>
+                </ul>
+            </div>
+            
+            <div class="bonus-total">Łączna wartość wszystkich bonusów: 19,988 zł</div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Realne historie transformacji</h2>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Po pierwszym warsztacie zautomatyzowałem odpowiedzi na powtarzalne zapytania klientów. Możliwość zadawania pytań na żywo była kluczowa - miałem specyficzny przypadek, którego żaden kurs online by nie przewidział. Ludwik pomógł mi stworzyć rozwiązanie na miejscu. Zyskuję teraz około 8 godzin tygodniowo, które mogę poświęcić na rozwój biznesu."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h5>Marek</h5>
+                            <p>Właściciel agencji marketingowej</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Przeszłam wcześniej dwa nagrywane kursy AI, które były stratą czasu. AI Navigator był inny – interaktywność warsztatów pozwoliła mi od razu wdrażać wiedzę. Skróciłam czas przygotowania raportów o 70%, a możliwość zadawania pytań na żywo była bezcenna. Różnica między uczeniem się z nagranego kursu a warsztatami live jest kolosalna."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h5>Anna</h5>
+                            <p>Analityk finansowy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        "Format warsztatów LIVE sprawił, że wreszcie zacząłem UŻYWAĆ AI, a nie tylko o niej słuchać. Możliwość natychmiastowej konsultacji, gdy napotkałem problem, była przełomowa. Teraz tworzę materiały marketingowe w kilka minut, a pytania zadane podczas warsztatów zaoszczędziły mi miesięcy samodzielnego zgadywania. Oszczędności? Ponad 15,000 zł miesięcznie na outsourcingu i 20 godzin tygodniowo mojego czasu."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-image">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="testimonial-author-info">
+                            <h5>Piotr</h5>
+                            <p>Dyrektor operacyjny</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section id="zapisz-sie" class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Dwie możliwości dołączenia - wybierz swoją ścieżkę:</h2>
+                <div class="cta-buttons">
+                    <div class="option-card" style="max-width: 450px; width: 100%;">
+                        <div class="option-badge">OPCJA 1</div>
+                        <h3 style="margin-bottom: 20px;">BEZPŁATNY START</h3>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 30px;">
+                            <li style="margin-bottom: 10px;">• Doświadcz transformacyjnej mocy AI Navigator bez żadnych zobowiązań</li>
+                            <li style="margin-bottom: 10px;">• Stwórz pierwsze narzędzia AI gotowe do natychmiastowego wdrożenia</li>
+                            <li style="margin-bottom: 10px;">• Po warsztacie zdecyduj, czy chcesz kontynuować pełen program</li>
+                        </ul>
+                        <a href="https://lifehackerzy.pl/ai-navigator-warsztat" class="btn btn-primary" style="width: 100%;">DOŁĄCZ DO PIERWSZEGO WARSZTATU (BEZPŁATNIE)</a>
+                    </div>
+                    
+                    <div id="pelny-program" class="option-card" style="max-width: 450px; width: 100%;">
+                        <div class="option-badge">OPCJA 2</div>
+                        <h3 style="margin-bottom: 20px;">DOŁĄCZ DO PEŁNEGO PROGRAMU TRANSFORMACYJNEGO</h3>
+                        <ul style="list-style-type: none; padding-left: 0; margin-bottom: 30px;">
+                            <li style="margin-bottom: 10px;">• Zagwarantuj sobie miejsce w całym cyklu warsztatów LIVE</li>
+                            <li style="margin-bottom: 10px;">• Otrzymaj natychmiastowy dostęp do wszystkich czterech ekskluzywnych bonusów</li>
+                            <li style="margin-bottom: 10px;">• Rozpocznij swoją transformację z AI już dziś</li>
+                        </ul>
+                        <a href="https://lifehackerzy.pl/ai-navigator-program" class="btn btn-primary" style="width: 100%;">DOŁĄCZ DO PEŁNEGO PROGRAMU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Instructor -->
+    <section class="about-instructor">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Kto prowadzi AI Navigator?</h2>
+            </div>
+            
+            <div class="instructor-container">
+                <div class="instructor-image">
+                    <img src="https://lifehackerzy.pl/assets/images/team/ludwik.jpg" alt="Ludwik Siadlak">
+                </div>
+                <div class="instructor-content">
+                    <div class="instructor-desc">
+                        <p>AI Navigator prowadzi <strong>Ludwik Siadlak – ekspert z 18-letnim doświadczeniem</strong> w dziedzinie technologii danych, od platform data warehouse, przez big data, business intelligence, aż po sztuczną inteligencję.</p>
+                        <p>Moje doświadczenie to nie tylko technologia, ale także <strong>wieloletnia praktyka w nauczaniu i wdrażaniu systemów</strong> w różnych organizacjach. Obserwuję rozwój AI od jej początków, co daje mi unikalną perspektywę na obecne możliwości i przyszłe trendy.</p>
+                        <p>W przeciwieństwie do "ekspertów od wczoraj", którzy oferują nagrywane kursy pełne teorii, prowadzę interaktywne warsztaty, gdzie możesz zadawać pytania, otrzymywać natychmiastową pomoc i budować rzeczywiste rozwiązania - nie tylko słuchać o nich.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final CTA Section -->
+    <section class="cta" style="background: linear-gradient(135deg, var(--neural-violet) 0%, var(--quantum-blue) 100%); color: white;">
+        <div class="container">
+            <div class="cta-content">
+                <h2 style="color: white;">Zostań częścią rewolucji AI - nie zostawaj w tyle</h2>
+                <p>Każdego tygodnia spotykam profesjonalistów, którzy tracą setki godzin na zadania, które AI mogłoby wykonać w minuty. Osoby, które nie adaptują się do tej technologii, szybko zostaną w tyle - to nie jest kwestia "czy", ale "kiedy".</p>
+                <p>AI Navigator to nie tylko seria warsztatów – to społeczność profesjonalistów, którzy rozumieją, że skuteczne wykorzystanie AI wymaga praktyki, interakcji i wsparcia ekspertów.</p>
+                <p>Jako Twój przewodnik w tej podróży, zapraszam Cię do współtworzenia przyszłości, w której technologia wspiera Cię w codziennej pracy, zamiast być kolejnym skomplikowanym narzędziem do opanowania.</p>
+                
+                <div class="stats-counter" style="background-color: rgba(255, 255, 255, 0.15); color: white; margin-top: 40px;">
+                    <p class="stats-text" style="color: rgba(255, 255, 255, 0.9);">Ilość miejsc jest limitowana! Ze względu na interaktywny charakter warsztatów, każda edycja ma ściśle ograniczoną liczbę miejsc. To gwarantuje, że każdy uczestnik otrzyma osobistą uwagę i wsparcie.</p>
+                    <div class="stats-number" style="color: white;">Aktualnie dostępnych miejsc: 17</div>
+                </div>
+                
+                <div class="cta-buttons" style="margin-top: 40px;">
+                    <a href="https://lifehackerzy.pl/ai-navigator-warsztat" class="btn btn-primary" style="background-color: white; color: var(--neural-violet);">DOŁĄCZ DO PIERWSZEGO WARSZTATU (bezpłatnie)</a>
+                    <a href="https://lifehackerzy.pl/ai-navigator-program" class="btn btn-secondary" style="border-color: white; color: white;">DOŁĄCZ DO PEŁNEGO PROGRAMU</a>
+                </div>
+                
+                <div class="cta-note" style="color: rgba(255, 255, 255, 0.8); margin-top: 50px;">
+                    <p style="color: rgba(255, 255, 255, 0.8);">-- Ludwik</p>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-top: 30px;">P.S. Nie podejmuję lekko decyzji o oferowaniu pierwszego warsztatu bezpłatnie. Robię to, ponieważ wierzę, że możliwość praktycznego doświadczenia wartości AI Navigator jest najlepszym sposobem, by pokazać Ci jak transformacyjny może być ten program. Dołącz do bezpłatnego warsztatu, doświadcz różnicy, a potem zdecyduj, czy warto kontynuować pełną transformację.</p>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-top: 20px;">P.P.S. Jeśli jesteś już częścią społeczności Lifehackerzy, znajdziesz w AI Navigator te same wartości – autentyczne podejście, praktyczne rozwiązania i solidne fundamenty. Pamiętaj, że jako uczestnik pełnego programu otrzymasz DOŻYWOTNI dostęp do całej społeczności Lifehackerów, co stanowi wartość wielokrotnie przekraczającą cenę całego programu!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <a href="https://lifehackerzy.pl/ai-navigator-warsztat" class="btn btn-primary">DOŁĄCZ DO PIERWSZEGO WARSZTATU (bezpłatnie)</a>
+        <a href="https://lifehackerzy.pl/ai-navigator-program" class="btn btn-secondary">DOŁĄCZ DO PEŁNEGO PROGRAMU</a>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lifehackerzy.pl | <a href="https://lifehackerzy.pl/privacy">Polityka prywatności</a> | <a href="https://lifehackerzy.pl/terms">Regulamin</a></p>
+        </div>
+    </footer>
+    
+    <script>
+        // Sticky CTA visibility
+        window.addEventListener('scroll', () => {
+            const stickyCta = document.querySelector('.sticky-cta');
+            const scrollPosition = window.scrollY;
+            const heroSection = document.querySelector('.hero');
+            const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+            
+            if (scrollPosition > heroBottom) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

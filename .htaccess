@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^lifehackerzy\.pl$ [NC]
+RewriteRule ^(.*)$ https://lifehackerzy.pl/$1 [R=301,L]
+RewriteRule ^webinar$ https://zaproszenie.siadlak.com/webinar-depresja [R=302,L]
