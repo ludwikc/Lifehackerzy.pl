@@ -1,16 +1,16 @@
-# Hackerzy.pl
+# Lifehackerzy.pl
 
 ## Dlaczego ta strona jest open source?
 
 Wiedza jest wszędzie - w książkach, artykułach i podcastach. Jednak to LUDZIE tworzą społeczność, której nie da się zastąpić przez AI. Dlatego ta strona jest open source, aby każdy mógł czerpać z niej wiedzę, ale także wnosić swoje unikalne doświadczenia i pomysły. W ten sposób tworzymy przestrzeń, gdzie innowacje rodzą się z kolektywnej inteligencji i współpracy.
 
-## Kim są Hackerzy Produktywności?
+## Kim są Lifehackerzy?
 
 Hackerzy Produktywności to elitarna społeczność nowoczesnych wojowników, którzy zamiast walczyć na polach bitew, pokonują własne ograniczenia za pomocą klawiatur i internetu. Skupiamy się na ciągłym rozwoju, doskonaleniu umiejętności i wzajemnym wsparciu. Poniżej znajdziesz główne sekcje naszej społeczności:
 
 ### Sekcje Społeczności
 
-#### Blogi Hackerów
+#### Blogi Lifehackerów
 Zanurz się w inspirujących wpisach blogowych od członków naszej społeczności. Poznaj ich historie, strategie produktywności i praktyczne porady, które pomogą Ci osiągnąć nowe wyżyny efektywności.
 
 #### Rekomendowane Książki, Artykuły i Podcasty
