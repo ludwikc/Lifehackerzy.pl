@@ -32,4 +32,4 @@ Chcesz dołączyć do nas i pomóc w rozwijaniu strony? Każdy wkład się liczy
 Dołącz do nas na GitHubie, zgłaszaj pomysły, twórz pull requesty i pomagaj nam rozwijać Hackerów Produktywności!
 
 
-[Sprawdź Nas!](https://hackerzy.pl)
+[Sprawdź Nas!](https://lifehackerzy.pl)

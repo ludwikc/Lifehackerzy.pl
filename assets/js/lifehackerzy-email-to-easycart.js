@@ -4,7 +4,7 @@
                 var email = encodeURIComponent($('#emailInput').val());
                 
                 // Construct the URL with the email parameter
-                var baseUrl = 'https://app.easycart.pl/checkout/siadlak/hackerzy';
+                var baseUrl = 'https://app.easycart.pl/checkout/siadlak/lifehackerzy';
                 var email = encodeURIComponent($('#emailInput').val());
                 var url = baseUrl + '?email=' + email;
                 
