@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+  background: #f4f9fc;
+  color: #0b245e;
+}
+
+.agenda {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.agenda-title {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 52px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #2b8cc4;
+  z-index: 0;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #3fa9f5, #2b8cc4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.circle img {
+  width: 48px;
+  height: 48px;
+}
+
+.step h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.step p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #3a4a66;
+  margin-bottom: 20px;
+}
+
+.progress {
+  background: #dce9f4;
+  border-radius: 999px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #1e5eff, #38d996);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+}
