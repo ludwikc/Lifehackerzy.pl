@@ -7927,7 +7927,7 @@
 
 .foundation-value {
 	font-size: 14px;
-	color: var(--color-six);
+	color: var(--color-three);
 }
 
 .foundation-value span {
@@ -7995,6 +7995,41 @@
 
 .foundation-benefits-mobile .foundation-benefit-card span {
 	font-size: 11px;
+}
+
+/* Price Card Info Box (Dla kogo, Co się zmienia, etc.) */
+.price-info-box {
+	margin: 15px 0;
+	padding: 18px;
+	background: rgba(var(--white-color-rgb), 0.07);
+	border-radius: 8px;
+	font-size: 0.95em;
+	line-height: 1.7;
+	color: rgba(255, 255, 255, 0.92);
+}
+
+.price-info-box p {
+	margin: 0 0 12px 0;
+}
+
+.price-info-box p:last-child {
+	margin-bottom: 0;
+}
+
+.price-info-box strong {
+	color: var(--white-color);
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+/* Price Card Testimonial Quote */
+.price-testimonial {
+	margin-top: 15px;
+	padding: 12px;
+	font-style: italic;
+	font-size: 0.88em;
+	color: rgba(255, 255, 255, 0.78);
+	border-left: 2px solid var(--main-color);
 }
 
 /* Price Card Selectable */
