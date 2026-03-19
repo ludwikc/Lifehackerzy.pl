@@ -27,7 +27,8 @@
         <?php include 'sections/course-modules.html'; ?>
         <?php include 'sections/workshops.html'; ?>
         <?php include 'sections/faq.html'; ?>
-        
+        <?php include 'sections/ps-ladder.html'; ?>
+
         <?php include 'partials/footer.html'; ?>
         
         <!-- Scroll To Top -->
