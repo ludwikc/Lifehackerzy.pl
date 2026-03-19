@@ -1710,7 +1710,7 @@
 	position: relative;
 	font-weight: 400;
 	font-size: 17px;
-	opacity: 0.70;
+	opacity: 1;
 	margin-top: 12px;
 	color: var(--color-six);
 	transition:all 500ms ease;
@@ -1756,7 +1756,7 @@
 .price-block_one-text{
 	position: relative;
 	font-size: 14px;
-	opacity: 0.70;
+	opacity: 1;
 	letter-spacing: 0.2px;
 	color: var(--color-six);
 	transition:all 500ms ease;
@@ -1810,7 +1810,7 @@
 	display: flex;
 	gap: 12px;
 	margin-bottom: 20px;
-	color: var(--color-six);
+	color: var(--color-three);
 	transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 	-webkit-transition:all 500ms ease;
@@ -8010,6 +8010,7 @@
 
 .price-info-box p {
 	margin: 0 0 12px 0;
+	color: rgba(255, 255, 255, 0.92);
 }
 
 .price-info-box p:last-child {
